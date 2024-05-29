@@ -1,1 +1,1 @@
-web: gunicorn burgess_community.wsgi
+web: gunicorn burgess-community-page.wsgi
