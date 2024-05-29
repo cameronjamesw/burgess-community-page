@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-%&s!or$g%2-_g@l6h7r_sv)meskmi(mn(586a4^xgatkg2o^a6
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-cameronjame-burgesscomm-0jpc33qk5v0.ws-us114.gitpod.io',
-                ' .herokuapp.com',]
+                ' .herokuapp.com',
+                'https://burgess-community-22799d4a8274.herokuapp.com/discussion/',]
 
 
 # Application definition
