@@ -14,6 +14,7 @@ class Discussion(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    approved = models.BooleanField(default=False)
 
 class Comment(models.Model):
     discussion = models.ForeignKey(
