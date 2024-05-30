@@ -6,4 +6,4 @@ from .models import Discussion
 
 class DiscussionList(generic.ListView):
     queryset = Discussion.objects.all()
-    template_name = "discussion_list"
+    template_name = "discussion/index.html"
