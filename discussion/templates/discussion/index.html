@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B&H | Discussion</title>
-</head>
-<body>
-    <head>This is the head</head>
-    <div>
-        <h1>Discussions</h1>
-        <div>
-            {% for discussion in object_list %}
-            <h2>{{discussion.title}}</h2>
-            <h4>{{discussion.author}}</h4>
-            <p>{{discussion.content}}</p>
-            {% endfor %}
+{% extends "base.html" %}
 
-        </div>
+{% block content %}
+
+<div>
+    <h1>Discussions</h1>
+    <div>
+        {% for discussion in object_list %}
+        <h2>{{discussion.title}}</h2>
+        <h4>{{discussion.author}}</h4>
+        <p>{{discussion.content}}</p>
+        {% endfor %}
+
     </div>
-    <footer>This is the footer</footer>
-</body>
-</html>
+</div>
+
+{% endblock %}
