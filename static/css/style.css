@@ -1,7 +1,10 @@
+/* This is the Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
 header {
     background-color: aqua;
 }
 
-h1 {
-    text-transform: capitalize;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'teko', 'sans-serif';
 }
