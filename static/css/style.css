@@ -104,3 +104,10 @@ footer {
     font-size: 150%;
     text-transform: uppercase;
 }
+
+/* These styles are for the discussion box */
+
+.discussion-box {
+    background-color: #d3d3d3;
+    border-top: #000 2px solid;
+}
