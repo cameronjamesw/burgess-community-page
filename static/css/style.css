@@ -14,6 +14,19 @@ header {
     border-bottom: 2px solid #3d3d3d;
 }
 
+.navbar {
+    background-color: #d3d3d3;
+}
+
+.container {
+    background-color: aquamarine;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'teko', 'sans-serif';
+}
+
+#hero-image {
+    background: url("../images/sunset.jpg") fixed center / cover;
+    min-height: 100vh;
 }
