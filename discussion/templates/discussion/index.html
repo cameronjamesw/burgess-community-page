@@ -6,7 +6,7 @@
     <div class="container-lg text-center" id="hero-text">
         <h3 class="text-uppercase">Camp Burgess & Hayward community page</h3>
         <p>For the use of the '24 staff</p>
-        <button class="btn btn-lg btn-secondary" id="staff-button">View Staff</button>
+        <button class="btn btn-lg btn-success" id="staff-button">View Staff</button>
     </div>
 
 </section>
@@ -16,7 +16,7 @@
         <div class="row">
             {% for discussion in object_list %}
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" id="discussion-card">
                     <img src="../../../static/images/sample_photo.png" id="card-img" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h4 class="card-title">{{discussion.title}}</h4>
@@ -24,7 +24,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-success">View Post</a>
                     </div>
                 </div>
             </div>
