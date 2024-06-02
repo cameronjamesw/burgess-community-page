@@ -1,8 +1,17 @@
 /* This is the Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
+
+/* This overrides the default browser settings */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 header {
-    background-color: aqua;
+    background-color: #d3d3d3;
+    border-bottom: 2px solid #3d3d3d;
 }
 
 h1, h2, h3, h4, h5, h6 {

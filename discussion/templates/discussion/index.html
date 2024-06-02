@@ -4,12 +4,14 @@
 
 <div>
     <h1>Discussions</h1>
-    <div>
+    <div class="container">
         {% for discussion in object_list %}
-        <h2>{{discussion.title}}</h2>
-        <h4>{{discussion.author}}</h4>
-        <p>{{discussion.content}}</p>
-        {% endfor %}
+        <div>
+            <h2>{{discussion.title}}</h2>
+            <h4>{{discussion.author}}</h4>
+            <p>{{discussion.content}}</p>
+            {% endfor %}
+        </div>
 
     </div>
 </div>
