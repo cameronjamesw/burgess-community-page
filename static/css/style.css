@@ -8,7 +8,13 @@
     padding: 0px;
     box-sizing: border-box;
 }
+/* These styles refer to main font stlyes */
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'teko', 'sans-serif';
+}
+
+/* These are the styles for the header */
 header {
     background-color: #3d3d3d;
 }
@@ -38,29 +44,43 @@ li > a:hover {
     color: #d3d3d3;
 }
 
-#toggler-icon {
-    color: #fff;
-}
-
 .active {
     text-decoration: underline;
 }
 
 .active:hover {
     text-decoration: underline;
-}
-
-.white {
     color: #fff;
 }
 
-.container {
-    background-color: aquamarine;
+/* These styles refer to the footer */
+
+footer {
+    background-color: #3d3d3d;
+    border-top: #fff solid 2px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'teko', 'sans-serif';
+#footer-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
 }
+
+#footer-list > li {
+    color: #fff;
+    font-size: 150%;
+}
+
+#copyright {
+    align-items: flex-end;
+    color: #fff;
+    list-style-type: none;
+    font-size: 150%;
+}
+
+
+
+/* These styles refer to the home page */
 
 #hero-image {
     background: url("../images/sunset.jpg") fixed center / cover;
