@@ -78,3 +78,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #d3d3d3;
     font-size: 100%;
 }
+
+#staff-button {
+    font-family: 'teko', 'sans-serif';
+    font-size: 150%;
+    text-transform: uppercase;
+}
