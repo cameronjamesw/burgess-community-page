@@ -17,7 +17,7 @@
             {% for discussion in object_list %}
             <div class="col-md-4">
                 <div class="card mb-4" id="discussion-card">
-                    <img src="../../../static/images/sample_photo.png" id="card-img" class="card-img-top" alt="...">
+                    <img src="../../../static/images/sample_photo.png" id="card-img" class="card-img-top" alt="{{discussion.title}}">
                     <div class="card-body">
                         <h4 class="card-title">{{discussion.title}}</h4>
                         <h5 class="card-title">{{discussion.author}}</h5>
