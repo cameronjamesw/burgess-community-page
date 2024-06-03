@@ -1,0 +1,114 @@
+/* This is the Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+
+/* This overrides the default browser settings */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* These styles refer to main font stlyes */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'teko', 'sans-serif';
+}
+
+/* These are the styles for the header */
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+.navbar {
+    background-color: #112a12;
+    border-bottom: 2px solid #fff;
+    font-family: 'teko', 'sans-serif';
+    font-size: 200%;
+    color: #fff;
+}
+
+li > a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+li > a:hover {
+    color: #d3d3d3;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.active:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* These styles refer to the footer */
+
+footer {
+    background-color: #112a12;
+    border-top: #fff solid 2px;
+}
+
+#footer-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+#footer-list > li {
+    color: #fff;
+    font-size: 150%;
+}
+
+#copyright {
+    align-items: flex-end;
+    color: #fff;
+    list-style-type: none;
+    font-size: 150%;
+}
+
+
+
+/* These styles refer to the home page */
+
+#hero-image {
+    background: url("../images/sunset.jpg") fixed center / cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#hero-text > h3 {
+    color: #d3d3d3;
+    font-size: 350%;
+}
+
+#hero-text > p {
+    color: #d3d3d3;
+    font-size: 100%;
+}
+
+#staff-button {
+    font-family: 'teko', 'sans-serif';
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+/* These styles are for the discussion box */
+
+.discussion-box {
+    background-color: #3d3d3d;
+    border-top: #fff 2px solid;
+}
+
+#discussion-card {
+    border: #fff solid 2px
+}
