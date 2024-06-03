@@ -20,7 +20,7 @@ class Discussion(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"{self.title} | Written by {self.title}"
+        return f"{self.title} | Written by {self.author}"
 
 class Comment(models.Model):
     discussion = models.ForeignKey(
