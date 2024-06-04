@@ -112,3 +112,14 @@ footer {
 #discussion-card {
     border: #fff solid 2px
 }
+
+#fire-background {
+    background: url('../images/fire.jpg') fixed center / cover;
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    width: 100%;
+}

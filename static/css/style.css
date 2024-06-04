@@ -121,5 +121,5 @@ footer {
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     min-height: 100vh;
-    width: fit-content%;
+    width: 100%;
 }
