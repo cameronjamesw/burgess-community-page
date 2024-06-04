@@ -1,5 +1,7 @@
 {% load static %}
 
+{% url 'home' as home_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../static/images/B&H Logo (Transparent).png" alt="B&H Logo"></a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/images/B&H Logo (Transparent).png" alt="B&H Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-              <a class="active" aria-current="page" href="#">Home</a>
+              <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li>
               <a href="#">Profile</a>
