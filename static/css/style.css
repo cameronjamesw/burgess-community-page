@@ -144,3 +144,10 @@ footer {
     margin-top: 150px;
 }
 
+#logout-box {
+    margin-top: 150px;
+}
+
+#logout-text {
+    letter-spacing: 4px;
+}
