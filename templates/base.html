@@ -1,6 +1,9 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +28,8 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/images/B&H Logo (Transparent).png" alt="B&H Logo"></a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/images/B&H Logo (Transparent).png"
+            alt="B&H Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,38 +37,52 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-              <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page"
+                href="{% url 'home' %}">Home</a>
             </li>
             <li>
               <a href="#">Profile</a>
             </li>
+            {% if user.is_authenticated %}
             <li>
-              <a href="#">Sign In</a>
+              <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_logout' %}">Logout</a>
             </li>
+            {% else %}
+            <li>
+              <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li>
+              <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page"
+                href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main>
+  <main class="flex-shrink-0 main-bg">
     {% block content %}
     <!-- Main content goes between these tags -->
     {% endblock content %}
   </main>
 
   <footer class="footer mt-auto py-3 dark-bg">
-      <ul class="container row">
-        <div class="col-7" id="footer-list">
-          <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
-        </div>
-        <div class="col-5">
+    <ul class="container row">
+      <div class="col-7" id="footer-list">
+        <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+      </div>
+      <div class="col-5">
         <li id="copyright">
           <p>Copyright of Camp Burgess & Hayward 2024</p>
-        </li></div>
-      </ul>
+        </li>
+      </div>
+    </ul>
   </footer>
 
   <!-- This is the font awesome script -->

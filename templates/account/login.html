@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid mt-0 fire-background">
+  <div class="overlay">
+    <div class="row">
+      <div class="col-sm-4 mt-5 offset-md-3 white-border text-white">
+        <h3>{% trans "Sign In" %}</h3>
+        <p>{% blocktrans %}Welcome back to the Burgess Community Page. To leave a comment or like a dicsussion, please log in. If
+          you
+          have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+          first.{% endblocktrans %}</p>
+          <form class="login" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

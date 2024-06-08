@@ -114,7 +114,7 @@ footer {
     margin-top: 100px;
 }
 
-#fire-background {
+.fire-background {
     background: url('../images/background_image.jpeg') fixed center / cover;
     min-height: 100vh;
     margin-top: 100px;
@@ -133,4 +133,9 @@ footer {
 #image-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     border: #fff solid 5px;
+}
+
+.white-border {
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
 }
