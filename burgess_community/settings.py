@@ -129,6 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
