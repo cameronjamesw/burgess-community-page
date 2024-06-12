@@ -13,6 +13,24 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'teko', 'sans-serif';
 }
+/* Generic Classes */
+
+.fire-background {
+    background: url('../images/background_image.jpeg') fixed center / cover;
+    min-height: 100vh;
+    margin-top: 100px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.white-border {
+    border: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 /* These are the styles for the header */
 
@@ -102,7 +120,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* These styles are for the discussion box */
+/* These styles are for the discussion box on the home page */
 
 .discussion-box {
     background-color: #3d3d3d;
@@ -114,18 +132,6 @@ footer {
     margin-top: 100px;
 }
 
-.fire-background {
-    background: url('../images/background_image.jpeg') fixed center / cover;
-    min-height: 100vh;
-    margin-top: 100px;
-}
-
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    min-height: 100vh;
-    width: 100%;
-}
-
 #card-img {
     width: 100%;
 }
@@ -135,15 +141,12 @@ footer {
     border: #fff solid 5px;
 }
 
-.white-border {
-    border: 2px solid #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
+/* Login Page Styling */
 #login-box {
     margin-top: 150px;
 }
 
+/* Logout Page Styling */
 #logout-box {
     margin-top: 150px;
 }
@@ -152,10 +155,12 @@ footer {
     letter-spacing: 4px;
 }
 
+/* Registration Page styling */
 #registration-box {
     margin-top: 150px;
 }
 
+/* Password Reset Page Styling */
 #password-reset-box {
     margin-top: 150px;
 }
