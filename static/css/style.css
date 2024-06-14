@@ -169,3 +169,13 @@ footer {
 #password-reset-done-box {
     margin-top: 150px;
 }
+
+/* Password Reset Key Page Styling */
+#reset-key-box {
+    margin-top: 150px;
+}
+
+/* Password Reset Key Done Page Styling */
+#reset-key-done-box {
+    margin-top: 150px;
+}
