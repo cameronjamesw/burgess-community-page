@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-cameronjame-burgesscomm-0jpc33qk5v0.ws-us114.gitpod.io',
+ALLOWED_HOSTS = ['8000-cameronjame-burgesscomm-pz47xl890y2.ws-us116.gitpod.io',
                 '.herokuapp.com',]
 
 
@@ -103,7 +103,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-cameronjame-burgesscomm-0jpc33qk5v0.ws-us114.gitpod.io",
+    "https://8000-cameronjame-burgesscomm-pz47xl890y2.ws-us116.gitpod.io",
     "https://*.herokuapp.com"
 ]
 
@@ -135,10 +135,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER ='camoranthd@gmail.com'
-EMAIL_HOST_PASSWORD ='CrLc@mpB&hlbTP'
+EMAIL_HOST_USER = os.environ.get('traces_email')
+EMAIL_HOST_PASSWORD = os.environ.get('traces_email_password')
 
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True

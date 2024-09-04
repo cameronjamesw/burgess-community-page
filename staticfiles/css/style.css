@@ -179,3 +179,8 @@ footer {
 #reset-key-done-box {
     margin-top: 150px;
 }
+
+/* Email Verification Box */
+#email-confirm {
+    margin-top: 150px;
+}
