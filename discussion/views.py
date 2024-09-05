@@ -11,9 +11,13 @@ class DiscussionList(generic.ListView):
 def discussion_content(request, slug):
     queryset = Discussion.objects.filter(status=1)
     discussion = get_object_or_404(queryset, slug=slug)
+    comments = discussion.comments.all().order_by("-created_on")
+    comment_count = discussion.comments.filter(approved=True).count()
 
     return render(
         request,
         "discussion/discussion_content.html",
-        {"discussion": discussion},
+        {"discussion": discussion,
+        "comments": comments,
+        "comment_count": comment_count},
     )
