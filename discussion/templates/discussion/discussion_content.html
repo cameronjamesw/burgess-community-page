@@ -2,12 +2,11 @@
 
 {% block content %}
 <section class="fire-background">
-    <div class="overlay container-fluid">
+    <div class="overlay container-fluid mt-5">
         <div class="row">
             <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark my-5" id="discussion-content-box">
-                <img src="../../../static/images/sample_photo_2.jpg" class="card-img" id='card-img' alt="...">
-                <div class="card-img-overlay" id="image-overlay">
-                  <h3 class="card-title">{{discussion.title}}</h3>
+                <div class="card-img p-2" id="image-overlay">
+                  <h2 class="card-title">{{discussion.title}}</h2>
                   <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
                   <p class="card-text">{{discussion.content}}</p>
                   <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
