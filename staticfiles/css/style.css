@@ -179,3 +179,10 @@ footer {
 #email-confirm {
     margin-top: 150px;
 }
+
+/* Comment Form Styles */
+
+#comment_form {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: #fff solid 5px;
+}
