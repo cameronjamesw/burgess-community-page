@@ -9,7 +9,7 @@
     <div class="row">
       <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark my-5" id="discussion-content-box">
         <div class="card-img p-2" id="image-overlay">
-          <h2 class="card-title">{{discussion.title}}</h2>
+          <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
           <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
           <p class="card-text">{{discussion.content}}</p>
           <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
@@ -19,31 +19,32 @@
 
           <!-- Displaying Comments -->
           <div>
-            <div> <strong class="text-secondary">
+            <div class="mx-4"> <strong class="text-secondary">
                 <i class="far fa-comments"></i> {{ comment_count }}
               </strong>
               <h2>Comments:</h2>
               <div>
                 {% for comment in comments %}
-                <div class="p-1 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-                  <p class="font-weight-bold">
+                <div class="bg-secondary text-white border-light card p-1 comments
+                {% if not comment.approved and comment.author == user %}
+                faded{% elif not comment.approved %} d-none{% endif %}">
+                  <div class="fw-medium text-decoration-underline bs-dark card-header">
                     {{ comment.author }}
-                    <span class="font-weight-normal">
-                      {{ comment.created_on }}
-                    </span> wrote:
-                  </p>
-                  <div class="card-text" id="comment{{ comment.id }}">
-                    {{ comment.body | linebreaks }}
                   </div>
-                  <hr>
-                  {% if not comment.approved and comment.author == user %}
-                  <p class="approval">
-                    This comment is awaiting approval
-                  </p>
-                  {% endif %}
+                  <div class="card-body bg-dark" id="comment{{ comment.id }}">
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="text-danger-emphasis mark">
+                      This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                    <blockquote class="mb-0 text-white">
+                      <p>{{ comment.body | linebreaks }}</p>
+                      <p class="blockquote-footer text-primary">Posted on <cite title="Source Title">
+                        {{comment.created_on}}</cite></p>
+                    </blockquote>
+                  </div>
                 </div>
+                <br>
                 <!-- Our for loop ends here -->
                 {% endfor %}
               </div>
