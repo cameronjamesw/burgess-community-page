@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <section class="fire-background">
   <!-- This section refers to the discussion content -->
-  <div class="overlay container-fluid mt-5">
+  <div class="overlay container-fluid mt-5 pb-5">
     <div class="row">
       <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark my-5" id="discussion-content-box">
         <div class="card-img p-2" id="image-overlay">
@@ -13,49 +15,66 @@
           <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
 
           <!-- Displaying count of comments -->
-  <div class="row">
-    <div class="col-12">
-      <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
-      </strong>
-    </div>
-    <div class="col-12">
-      <hr>
-    </div>
-  </div>
-  <!-- Displaying Comments -->
-  <div>
-    <div>
-      <h2>Comments:</h2>
-      <div>
-        {% for comment in comments %}
-        <div class="p-1 comments
+          <div class="row">
+            <div class="col-12">
+              <strong class="text-secondary">
+                <i class="far fa-comments"></i> {{ comment_count }}
+              </strong>
+            </div>
+            <div class="col-12">
+              <hr>
+            </div>
+          </div>
+          <!-- Displaying Comments -->
+          <div>
+            <div>
+              <h2>Comments:</h2>
+              <div>
+                {% for comment in comments %}
+                <div class="p-1 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            <span class="font-weight-normal">
-              {{ comment.created_on }}
-            </span> wrote:
-          </p>
-          <div class="card-text" id="comment{{ comment.id }}">
-            {{ comment.body | linebreaks }}
+                  <p class="font-weight-bold">
+                    {{ comment.author }}
+                    <span class="font-weight-normal">
+                      {{ comment.created_on }}
+                    </span> wrote:
+                  </p>
+                  <div class="card-text" id="comment{{ comment.id }}">
+                    {{ comment.body | linebreaks }}
+                  </div>
+                  {% if not comment.approved and comment.author == user %}
+                  <p class="approval">
+                    This comment is awaiting approval
+                  </p>
+                  {% endif %}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+              </div>
+            </div>
           </div>
-          {% if not comment.approved and comment.author == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
-        </div>
-        <!-- Our for loop ends here -->
-        {% endfor %}
-      </div>
-    </div>
-  </div>
         </div>
       </div>
     </div>
+    <!-- Creating New Comments -->
+    <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark" >
+      <div class="card-body" id="comment_form">
+        <h2>Add a Comment:</h2>
+        {% if user.is_authenticated %}
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-dark btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p><a class="text-white" href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
+
 </section>
 
 {% endblock %}
