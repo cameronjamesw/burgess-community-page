@@ -31,17 +31,25 @@
                   <div class="fw-medium text-decoration-underline bs-dark card-header">
                     {{ comment.author }}
                   </div>
-                  <div class="card-body bg-dark" id="comment{{ comment.id }}">
+                  <div class="card-body bg-dark">
                     {% if not comment.approved and comment.author == user %}
                     <p class="text-danger-emphasis mark">
                       This comment is awaiting approval
                     </p>
                     {% endif %}
                     <blockquote class="mb-0 text-white">
-                      <p>{{ comment.body | linebreaks }}</p>
+                      <div id="comment{{ comment.id }}">
+                        <p>{{ comment.body | linebreaks }}</p>
+                      </div>
                       <p class="blockquote-footer text-primary">Posted on <cite title="Source Title">
-                        {{comment.created_on}}</cite></p>
+                          {{comment.created_on}}</cite></p>
                     </blockquote>
+                    {% if user.is_authenticated and comment.author == user %}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="me-md-2 btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
+                          class="fa-regular fa-pen-to-square"></i></button>
+                    </div>
+                    {% endif %}
                   </div>
                 </div>
                 <br>
@@ -73,4 +81,8 @@
 
 </section>
 
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}

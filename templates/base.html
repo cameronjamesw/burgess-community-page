@@ -60,15 +60,16 @@
           </ul>
         </div>
     </nav>
-     <!-- displaying Django messages -->
-          <div class="col-md-8 offset-md-2 z-3 alert-success rounded-3 position-absolute top-50">
-              {% for message in messages %}
-              <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible alert-success fade show" id="msg" role="alert">
-                <i class="fa-regular fa-square-check"></i> {{ message | safe }}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-              {% endfor %}
-          </div>
+    <!-- displaying Django messages -->
+    <div class="col-md-8 offset-md-2 z-3 alert-success rounded-3 position-absolute top-50">
+      {% for message in messages %}
+      <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible alert-success fade show" id="msg"
+        role="alert">
+        <i class="fa-regular fa-square-check"></i> {{ message | safe }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+    </div>
 
   </header>
   <main class="flex-shrink-0 main-bg">
@@ -95,6 +96,9 @@
 
   <!-- This is the font awesome script -->
   <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+
+  {% block extras %}
+  {% endblock %}
 </body>
 
 </html>
