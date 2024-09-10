@@ -24,9 +24,9 @@ def discussion_content(request, slug):
             comment.discussion = discussion
             comment.save()
             messages.add_message(
-            request, messages.SUCCESS,
-            'Comment successfully submitted, now awaiting approval'
-        )
+        request, messages.SUCCESS,
+        'Comment submitted and awaiting approval'
+    )
 
     comment_form = CommentForm()
 
