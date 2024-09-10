@@ -46,6 +46,12 @@ header img {
     color: #fff;
 }
 
+.brand-background {
+    background-color: #3d3d3d;
+    border-radius: 2%;
+    color: #fff;
+}
+
 li > a {
     color: #fff;
     text-decoration: none;

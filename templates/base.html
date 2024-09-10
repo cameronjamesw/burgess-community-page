@@ -59,24 +59,17 @@
             {% endif %}
           </ul>
         </div>
-      </div>
-       <!-- displaying Django messages -->
- <div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-dismissible
-        fade show" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn-close"
-          data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
     </nav>
-   
-      {% endfor %}
-    </div>
-  </div>
-</div>
+     <!-- displaying Django messages -->
+          <div class="col-md-8 offset-md-2 brand-background position-fixed top-50">
+              {% for message in messages %}
+              <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                  {{ message | safe }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {% endfor %}
+          </div>
+
   </header>
   <main class="flex-shrink-0 main-bg">
     {% block content %}
