@@ -3,13 +3,36 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Discussion, Comment
-from .forms import CommentForm
+from .forms import DiscussionForm, CommentForm
 
 # Create your views here.
 
-class DiscussionList(generic.ListView):
-    queryset = Discussion.objects.all()
-    template_name = "discussion/index.html"
+def discussion_list(request):
+    discussions = Discussion.objects.all().order_by("-created_on")
+   
+    if request.method == "POST":
+        discussion_form = DiscussionForm(data=request.POST)
+        if discussion_form.is_valid():
+            discussion = discussion_form.save(commit=False)
+            discussion.author = request.author
+            discussion.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Thank you, discussion submitted'
+            )
+    
+    discussion_form = DiscussionForm()
+
+    context = {
+        "discussions": discussions,
+        "discussion_form": discussion_form
+        }
+
+    return render(
+        request,
+        "discussion/index.html",
+        context,
+    )
 
 def discussion_content(request, slug):
     queryset = Discussion.objects.filter(status=1)
