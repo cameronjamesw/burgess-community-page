@@ -2,19 +2,21 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.template.defaultfilters import slugify
 from .models import Discussion, Comment
 from .forms import DiscussionForm, CommentForm
 
 # Create your views here.
 
 def discussion_list(request):
-    discussions = Discussion.objects.all().order_by("-created_on")
+    discussions = Discussion.objects.filter(status=1).order_by("-created_on")
    
     if request.method == "POST":
         discussion_form = DiscussionForm(data=request.POST)
         if discussion_form.is_valid():
             discussion = discussion_form.save(commit=False)
-            discussion.author = request.author
+            discussion.author = request.user
+            discussion.slug = slugify(discussion.title)
             discussion.save()
             messages.add_message(
                 request, messages.SUCCESS,
@@ -25,7 +27,7 @@ def discussion_list(request):
 
     context = {
         "discussions": discussions,
-        "discussion_form": discussion_form
+        "discussion_form": discussion_form,
         }
 
     return render(
