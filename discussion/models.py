@@ -10,7 +10,8 @@ class Discussion(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="discussion_post"
     )
-    content = models.TextField(default="blank")
+    excerpt = models.CharField(max_length=100, blank=False)
+    content = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
