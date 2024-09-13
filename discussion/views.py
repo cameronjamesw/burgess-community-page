@@ -20,7 +20,7 @@ def discussion_list(request):
             discussion.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Thank you, discussion submitted'
+                'Thank you, discussion submitted, awaiting approval!'
             )
     
     discussion_form = DiscussionForm()
