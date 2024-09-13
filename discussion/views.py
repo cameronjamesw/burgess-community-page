@@ -9,7 +9,7 @@ from .forms import DiscussionForm, CommentForm
 # Create your views here.
 
 def discussion_list(request):
-    discussions = Discussion.objects.filter(status=1).order_by("-created_on")
+    discussions = Discussion.objects.filter(status=1, approved=True).order_by("-created_on")
    
     if request.method == "POST":
         discussion_form = DiscussionForm(data=request.POST)
