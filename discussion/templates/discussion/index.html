@@ -26,12 +26,23 @@
                         <h4 class="card-title">{{discussion.title}}</h4>
                         <h5 class="card-title">{{discussion.author}}</h5>
                         <p class="card-text">{{discussion.excerpt}}</p>
-                        <a href="{% url 'disc_content' discussion.slug %}" class="btn btn-success">View Post</a>
+                        <div class="d-flex mb-3">
+                            <div class="me-auto">
+                            <a href="{% url 'disc_content' discussion.slug %}" class="btn btn-success justify-content-start">View Post</a></div>
+                            {% if user.is_authenticated and discussion.author == user %}
+                            <div class="gap-1 d-md-flex justify-self-end">
+                                <button class="me-md-2 btn btn-success btn-edit"><i
+                                        class="fa-regular fa-pen-to-square"></i></button>
+                                <button class="btn btn-danger btn-delete"><i
+                                        class="fa-regular fa-trash-can"></i></button>
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            
+
         </div>
     </div>
 </section>
