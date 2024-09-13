@@ -7,7 +7,9 @@
     <div class="container-lg text-center" id="hero-text">
         <h3 class="text-uppercase">Camp Burgess & Hayward community page</h3>
         <p>For the use of the '24 staff</p>
+        {% if user.is_authenticated %}
         <button class="btn btn-lg btn-success" id="createDiscussionButton">Create Discussion</button>
+        {% endif %}
     </div>
 
 </section>
