@@ -129,7 +129,13 @@ The color scheme that I have used is one that I feel best represents the camp cu
 
 # Features
 
+Below are the list of current features throughout the website. There is a section towards the end discussing future features which will be implemented at a future date.
+
 ## Sign Up / Registration
+
+Here is a screenshot of the registration page. Here the user is able to create a profile for the website. There are validation and authentication techniques in place designed to provide better security as well as a better user experience. The user is required to sign up via an email address, and before they can log in they must first verify their email through email verification methods.
+
+![A screenshot of the log in form on the website.](documentation/images/log-in-ss.png)
 
 ## Creating a Discussion
 
