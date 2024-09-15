@@ -139,6 +139,15 @@ Here is a screenshot of the registration page. Here the user is able to create a
 
 ## Creating a Discussion
 
+Here is a screenshot of the form where users are able to create a discussion. Before this form is available to the user, they must first sign in to their account, this is so only verified and genuine users can add to the website's discussions. The main fields that the user can fill out are..
+- Title
+- Excerpt
+- Content
+
+If any of these fields are not filled out, then the user will not be able to submit the discussion. This is so that there are no empty fields being submitted to the database that may cause any anomalies. Furthermore this just provides more integrity within the website.
+
+![A screenshot of the form where users can create their own discussions](documentation/images/create-discussion-ss.png)
+
 ## Commenting on a Discussion
 
 ## Profile Customisation
