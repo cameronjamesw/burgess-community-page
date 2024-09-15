@@ -165,4 +165,8 @@ The testing file for the Burgess Community Page can be viewed [here](/TESTING.md
 
 # Media
 
+- [Vector Stock](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478) - The Favicon was taken from Vector Stock
+
+- [Flickr](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478) - The Cape Cod image was taken from Flickr
+
 # Acknowledgements & Thanks
