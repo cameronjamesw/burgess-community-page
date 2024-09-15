@@ -165,6 +165,8 @@ The files are now available to view within your github repository.
 
 ## Creating a Fork or Copying
 
+To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page when viewing the repository.
+
 ## Clone
 
 ## Repository Deployment via Heroku
