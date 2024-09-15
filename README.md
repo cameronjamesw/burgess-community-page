@@ -150,6 +150,14 @@ If any of these fields are not filled out, then the user will not be able to sub
 
 ## Commenting on a Discussion
 
+Below is a screenshot of the form where users are able to post comments on other discussions. This form is only present to users who have logged in, this is so that only verified users can post comments and it minimises the risk of spam and other unneccessary comments. 
+
+Upon the comment being submitted, the comment will be in a state of awaiting approval off one of the site admins. This is to protect the site users in the event of a comment that may need censoring. In the event of a previously existing comment being editing, upon submittion the comment will then fall back into a state of awaiting approval.
+
+In the event of the discussion being deleted, all related comments to said discussion will also be deleted.
+
+![A screenshot of the form where users are able to post comments on discussions](documentation/images/create-comment-ss.png)
+
 ## Profile Customisation
 
 ## Future Features
