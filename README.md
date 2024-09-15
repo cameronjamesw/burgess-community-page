@@ -95,7 +95,11 @@ I will be using ElephantSQL to store the PostgreSQL database for this project.
 
 # Design Choice
 
+In this section the different design choices will be explained along with their thought-process.
+
 ## Typography
+
+The main font style that I have used is 'Teko' from [Google Fonts](https://fonts.google.com/specimen/Teko). Teko has been used for the heading tags throughout the project. The typography of Teko fits the purpose of the project as the font-style is definitive and noisy, and in my opinion it reinforces the sleek flare insinuated by the website.
 
 ## Color Scheme
 
