@@ -74,11 +74,24 @@ I will be using ElephantSQL to store the PostgreSQL database for this project.
 
 ## Target Audience
 
+- The target audience for the Burgess Community Page will be staff members, current and old, who are interested in sharing their experiences and memories with other like-minded individuals.
+
+- Ideally the website will attract the attention of future staff members that share similar goals and interests to the current staff. In turn, this will encourage the Burgess Staff community to grow and raise awareness of the opportunity to work abroad for interested individuals. 
+
 ## User Stories
 
 ### New Visitor Goals
 
+- Gauge an understanding of what Camp Burgess is along with creating an understanding of summer camp culture.
+- Successfully navigate around the site and read discussions from existing members.
+- Create their own account and profile as well as engage with other site users.
+
 ### Existing Visitor Goals
+
+- Log in and out of their account.
+- Interact with new and exisitng users.
+- Customise and update their profile page to give a sense of individuality within the website.
+- Create and edit comments on other users' discussions.
 
 # Design Choice
 
