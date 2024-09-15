@@ -168,6 +168,10 @@ In the event of the discussion being deleted, all related comments to said discu
 
 # Agile
 
+This project was created through using the Agile Methodology. 
+
+The project's structure and progression from start to finish can be seen [here](https://github.com/users/cameronjamesw/projects/5/views/1)
+
 # Testing
 
 The testing file for the Burgess Community Page can be viewed [here](/TESTING.md)
