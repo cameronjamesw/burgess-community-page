@@ -117,6 +117,10 @@ The color scheme that I have used is one that I feel best represents the camp cu
 
 ## Logo & Favicon
 
+- The logo used was provided by Camp Burgess and Hayward.
+
+- The Favicon used was a cartoon campfire found over at [Vector Stock](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478). 
+
 ## Wireframes
 
 ## Flow Diagram
