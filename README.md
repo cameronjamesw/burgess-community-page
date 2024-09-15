@@ -44,6 +44,14 @@ Live site can be viewed here - link
 
 # Introduction
 
+Welcome to the Burgess Community Page, a website designed to be used by the staff of Camp Burgess in Sandwich, Massachussetts. 
+
+Camp Burgess is an overnight summer camp based in Cape Cod, Massachusetts. The camp was founded in 1928 by the South Shore YMCA and since the 60s has had an influx of international staff working there, with staff being hired from all over the world.
+
+![An image of Cape Cod, Massachussetts](static/images/cape_cod_image.jpg)
+
+The Burgess Community Page is a website which is designed to give staff members, old and new, a platform to communicate within a grander scale. Staff members are able to create discussions within the community website where they can discussion fond memories and ongoing experiences that all relate to working at Camp Burgess.
+
 # Project
 
 ## Site Objectives
