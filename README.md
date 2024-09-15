@@ -48,7 +48,7 @@ Welcome to the Burgess Community Page, a website designed to be used by the staf
 
 Camp Burgess is an overnight summer camp based in Cape Cod, Massachusetts. The camp was founded in 1928 by the South Shore YMCA and since the 60s has had an influx of international staff working there, with staff being hired from all over the world.
 
-![An image of Cape Cod, Massachussetts](static/images/cape_cod_image.jpg)
+![An image of Cape Cod, Massachussetts](documentation/images/cape_cod_image.jpg)
 
 The Burgess Community Page is a website which is designed to give staff members, old and new, a platform to communicate within a grander scale. Staff members are able to create discussions within the community website where they can discussion fond memories and ongoing experiences that all relate to working at Camp Burgess.
 
@@ -102,6 +102,18 @@ In this section the different design choices will be explained along with their 
 The main font style that I have used is 'Teko' from [Google Fonts](https://fonts.google.com/specimen/Teko). Teko has been used for the heading tags throughout the project. The typography of Teko fits the purpose of the project as the font-style is definitive and noisy, and in my opinion it reinforces the sleek flare insinuated by the website.
 
 ## Color Scheme
+
+![An image of the color scheme used throughout the webiste](documentation/images/BCP%20Color%20Pallet.png)
+
+The color scheme that I have used is one that I feel best represents the camp culture, and one that I feel creates excellent synergy throughout the entire website. 
+
+- It is no suprise that I have used both '#fff' and '#000' as I feel that these two base colors create a nutricious foundation for any potential color scheme to build upon. I am a big fan of using both black and white as they are so minimalist and I feel that there is a much greater attention to detail with these two colors.
+
+- I used '#d3d3d3' as an emphasis color to add to '#000' and really make certain features stand out and bring attention to something. For example, any text boxes or hovered links really perform well when using '#d3d3d3' as they provide excellent UX for the user as this sends a message that these areas require your attention.
+
+- I have used '#112a12' as the primary and most consistent color throughout the project. It is featured within both the header and footer of the project, along with any important submit buttons. The thought behind this is that it is a sleek, rich color that will add flare to the website, but more importantly it is a classic camp color which provokes a rural, natursitic feel within the user. 
+
+- Finally, I have used '#CD5909' as a base secondary color. This color is elicited within a majority of the images throughout the website and it provides a completementary viewpoint to '#112a12'.
 
 ## Logo & Favicon
 
