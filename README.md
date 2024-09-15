@@ -169,6 +169,15 @@ To clone/fork/copy the repository you click on the fork tab which is situated ne
 
 ## Clone
 
+To create a clone you do the following;
+
+1. Click on the code tab, left of the Gitpod tab
+2. To the right of the repository name, click the clipboard icon
+3. In the IED open GitBash
+4. Change the working directory to the location you prefer
+5. Add Git Clone with the copy of the repository name
+6. Clone has been created
+
 ## Repository Deployment via Heroku
 
 ## Deployment of the App
