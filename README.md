@@ -107,13 +107,13 @@ The main font style that I have used is 'Teko' from [Google Fonts](https://fonts
 
 The color scheme that I have used is one that I feel best represents the camp culture, and one that I feel creates excellent synergy throughout the entire website. 
 
-- It is no suprise that I have used both '#fff' and '#000' as I feel that these two base colors create a nutricious foundation for any potential color scheme to build upon. I am a big fan of using both black and white as they are so minimalist and I feel that there is a much greater attention to detail with these two colors.
+- It is no suprise that I have used both `#ffffff` and `#000000` as I feel that these two base colors create a nutricious foundation for any potential color scheme to build upon. I am a big fan of using both black and white as they are so minimalist and I feel that there is a much greater attention to detail with these two colors.
 
-- I used '#d3d3d3' as an emphasis color to add to '#000' and really make certain features stand out and bring attention to something. For example, any text boxes or hovered links really perform well when using '#d3d3d3' as they provide excellent UX for the user as this sends a message that these areas require your attention.
+- I used `#d3d3d3` as an emphasis color to add to '#000' and really make certain features stand out and bring attention to something. For example, any text boxes or hovered links really perform well when using `#d3d3d3` as they provide excellent UX for the user as this sends a message that these areas require your attention.
 
-- I have used '#112a12' as the primary and most consistent color throughout the project. It is featured within both the header and footer of the project, along with any important submit buttons. The thought behind this is that it is a sleek, rich color that will add flare to the website, but more importantly it is a classic camp color which provokes a rural, natursitic feel within the user. 
+- I have used `#112a12` as the primary and most consistent color throughout the project. It is featured within both the header and footer of the project, along with any important submit buttons. The thought behind this is that it is a sleek, rich color that will add flare to the website, but more importantly it is a classic camp color which provokes a rural, natursitic feel within the user. 
 
-- Finally, I have used '#CD5909' as a base secondary color. This color is elicited within a majority of the images throughout the website and it provides a completementary viewpoint to '#112a12'.
+- Finally, I have used `#CD5909` as a base secondary color. This color is elicited within a majority of the images throughout the website and it provides a completementary viewpoint to `#112a12`.
 
 ## Logo & Favicon
 
