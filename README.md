@@ -56,6 +56,20 @@ The Burgess Community Page is a website which is designed to give staff members,
 
 ## Site Objectives
 
+The objectives of the Burgess Community Page are as follows..
+
+- ### Create clean, readable front-end code that is accessible and easily navigated by users.
+
+I aim to create a website with not only flare and accessibility, but a website that has a unique User Interface through the use of both Bootstrap and Django. 
+
+- ### Make use of available back-end functionality
+
+Through the use of backend frameworks, the user will be able to create their own profile within the Burgess Community where they can customise to their liking. Furthermore, upon authentication, the user will be able to create and edit their own discussion posts, as well as leave comments on other discuussion too. 
+
+- ### Store data on an external cloud database
+
+I will be using ElephantSQL to store the PostgreSQL database for this project.
+
 # User Experience/UX
 
 ## Target Audience
