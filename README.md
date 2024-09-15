@@ -31,15 +31,7 @@ Live site can be viewed here - link
 * [Technologies Used](#technologies-used)
 * [Programming Languages, Frameworks & Libraries Used](#programming-languages-libraries--frameworks-used)
 * [Agile](#agile)
-- Testing
-    - Manual Testing
-    - User
-    - Bugs
-    - Lighthouse
-    - Validation Testing
-        - HTML
-        - CSS
-    - Python Testing
+* [Testing](#testing)
 * [Deployment](#deployment)
     * [Github Deployment](#github-deployment)
     * [Creating a Fork or Copying](#creating-a-fork-or-copying)
@@ -100,19 +92,7 @@ Live site can be viewed here - link
 
 # Testing
 
-## Manual Testing
-
-## User
-
-## Bugs
-
-## Lighthouse
-
-## Validation Testing
-
-### HTML
-
-### CSS
+The testing file for the Burgess Community Page can be viewed [here](/TESTING.md)
 
 # Deployment
 
