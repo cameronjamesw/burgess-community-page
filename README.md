@@ -180,6 +180,16 @@ To create a clone you do the following;
 
 ## Repository Deployment via Heroku
 
+- On the Heroku Dashboard page, click New and then select Create New App from the drop-down menu.
+- When the next page loads insert the App name and Choose a region. Then click 'Create app'
+- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. The credentials for this app were:
+    - Cloudinary URL
+    - Postgres Database URL
+    - Port (8000)
+    - Secret Key (unique to you)
+
+- Below this click Add buildpack and choose python and nodejs in that order.
+
 ## Deployment of the App
 
 # Credits
