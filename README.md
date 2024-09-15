@@ -153,6 +153,16 @@ The testing file for the Burgess Community Page can be viewed [here](/TESTING.md
 
 ## GitHub Deployment
 
+The website was stored using GitHub for storage of data and version control. To do this I did the following;
+
+After each addition, change or removal of code, in the terminal within your IDE (I used GitPod for this project) type:
+
+- git add .
+- git commit -m "meaningful and succinct commit message"
+- git push
+
+The files are now available to view within your github repository.
+
 ## Creating a Fork or Copying
 
 ## Clone
