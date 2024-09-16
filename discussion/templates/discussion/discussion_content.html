@@ -11,17 +11,17 @@
         <div class="card-img p-2" id="image-overlay">
           {% if user.is_authenticated and discussion.author == user %}
           <div class="d-flex mb-3">
-          <h1 class="card-title text-decoration-underline me-auto">{{discussion.title}}</h1>
+          <h1 class="card-title text-decoration-underline me-auto" id="discussionTitle">{{discussion.title}}</h1>
           <div class="justify-self-end">
             <button id="editDiscussionBtn" class="me-md-2 btn btn-success"><i class="fa-regular fa-pen-to-square"></i></button>
             <button class="btn btn-danger btn-delete"><i class="fa-regular fa-trash-can"></i></button>
           </div>
           </div>
           {% else %}
-          <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
+          <h1 class="card-title text-decoration-underline"">{{discussion.title}}</h1>
           {% endif %}
           <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
-          <p class="card-text">{{discussion.content}}</p>
+          <p class="card-text" id="discussionContent">{{discussion.content}}</p>
           <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
 
           <!-- Displaying count of comments -->
