@@ -9,7 +9,17 @@
     <div class="row">
       <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark my-5" id="discussion-content-box">
         <div class="card-img p-2" id="image-overlay">
+          {% if user.is_authenticated and discussion.author == user %}
+          <div class="d-flex mb-3">
+          <h1 class="card-title text-decoration-underline me-auto">{{discussion.title}}</h1>
+          <div class="justify-self-end">
+            <button class="me-md-2 btn btn-success btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+            <button class="btn btn-danger btn-delete"><i class="fa-regular fa-trash-can"></i></button>
+          </div>
+          </div>
+          {% else %}
           <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
+          {% endif %}
           <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
           <p class="card-text">{{discussion.content}}</p>
           <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
@@ -48,7 +58,8 @@
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                       <button class="me-md-2 btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
                           class="fa-regular fa-pen-to-square"></i></button>
-                      <button class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i class="fa-regular fa-trash-can"></i></button>
+                      <button class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i
+                          class="fa-regular fa-trash-can"></i></button>
                     </div>
                     {% endif %}
                   </div>
@@ -83,23 +94,19 @@
 </section>
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Do you really want to delete this comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>
