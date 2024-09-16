@@ -31,7 +31,7 @@
                             <a href="{% url 'disc_content' discussion.slug %}" class="btn btn-success justify-content-start">View Post</a></div>
                             {% if user.is_authenticated and discussion.author == user %}
                             <div class="gap-1 d-md-flex justify-self-end">
-                                <button class="me-md-2 btn btn-success btn-edit"><i
+                                <button class="me-md-2 btn btn-success btn-edit editDiscussionBtns"><i
                                         class="fa-regular fa-pen-to-square"></i></button>
                                 <button class="btn btn-danger btn-delete"><i
                                         class="fa-regular fa-trash-can"></i></button>

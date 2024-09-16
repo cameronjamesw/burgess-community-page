@@ -6,4 +6,3 @@ discussionBtn.addEventListener("click", (e) => {
     discussionModal.show();
     }
 );
-
