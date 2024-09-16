@@ -6,7 +6,6 @@ class DiscussionForm(forms.ModelForm):
         model = Discussion
         fields = ('title', 'excerpt', 'content', 'status')
         
-
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
