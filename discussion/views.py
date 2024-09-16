@@ -103,3 +103,11 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('discussion_content', args=[slug]))
+
+def discussion_edit(request, slug):
+    """
+    This is the view to edit an exisitng discussion.
+    """
+
+    queryset = Discussion.objects.all()
+    discussion = get_object_or_404(queryset, slug)
