@@ -31,7 +31,7 @@
                             <a href="{% url 'disc_content' discussion.slug %}" class="btn btn-success justify-content-start">View Post</a></div>
                             {% if user.is_authenticated and discussion.author == user %}
                             <div class="gap-1 d-md-flex justify-self-end">
-                                <button class="me-md-2 btn btn-success btn-edit editDiscussionBtns"><i
+                                <button class="me-md-2 btn btn-success btn-edit"><i
                                         class="fa-regular fa-pen-to-square"></i></button>
                                 <button class="btn btn-danger btn-delete"><i
                                         class="fa-regular fa-trash-can"></i></button>
@@ -52,7 +52,7 @@
     <div class="modal-dialog bg-dark rounded-3 border border-light-subtle">
         <div class="modal-content bg-dark">
             <div data-bs-theme="dark" class="modal-header bg-dark">
-                <h3 class="modal-title text-white">Create Discussion</h3>
+                <h3 id="discussionModalHeading" class="modal-title text-white">Create Discussion</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-white">
