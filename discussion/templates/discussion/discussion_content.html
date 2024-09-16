@@ -13,7 +13,7 @@
           <div class="d-flex mb-3">
           <h1 class="card-title text-decoration-underline me-auto">{{discussion.title}}</h1>
           <div class="justify-self-end">
-            <button class="me-md-2 btn btn-success btn-edit"><i class="fa-regular fa-pen-to-square"></i></button>
+            <button id="editDiscussionBtn" class="me-md-2 btn btn-success"><i class="fa-regular fa-pen-to-square"></i></button>
             <button class="btn btn-danger btn-delete"><i class="fa-regular fa-trash-can"></i></button>
           </div>
           </div>
@@ -115,7 +115,7 @@
 </div>
 
 <!-- This is the modal to edit a discussion -->
-<div class="modal fade" id="editDiscussionModal" tabindex="-1">
+<div class="modal fade" id="editDiscussionModal" tabindex="-2">
   <div class="modal-dialog bg-dark rounded-3 border border-light-subtle">
       <div class="modal-content bg-dark">
           <div data-bs-theme="dark" class="modal-header bg-dark">
@@ -138,5 +138,5 @@
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
-<script src="{% static 'js/discussion.js' %}"></script>
+<script src="{% static 'js/alter_discussion.js' %}"></script>
 {% endblock %}

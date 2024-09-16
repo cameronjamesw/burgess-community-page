@@ -54,6 +54,7 @@ def discussion_content(request, slug):
         'Comment submitted and awaiting approval'
     )
 
+    discussion_form = DiscussionForm()
     comment_form = CommentForm()
 
     return render(
@@ -62,8 +63,9 @@ def discussion_content(request, slug):
         {"discussion": discussion,
         "comments": comments,
         "comment_count": comment_count,
-        "comment_form": comment_form},
-        
+        "comment_form": comment_form,
+        "discussion_form": discussion_form
+        },
     )
 
 def comment_edit(request, slug, comment_id):
