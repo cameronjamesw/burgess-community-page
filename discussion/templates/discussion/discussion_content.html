@@ -18,7 +18,7 @@
           </div>
           </div>
           {% else %}
-          <h1 class="card-title text-decoration-underline"">{{discussion.title}}</h1>
+          <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
           {% endif %}
           <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
           <p class="card-text" id="discussionContent">{{discussion.content}}</p>
@@ -127,7 +127,7 @@
                   {{ discussion_form | crispy }}
                   {% csrf_token %}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button type="submit" id="submitBtn" class="btn btn-success">Submit</button>
               </form>
           </div>
       </div>
@@ -137,6 +137,12 @@
 {% endblock %}
 
 {% block extras %}
+<script>
+  const excerptField = document.getElementById("id_excerpt");
+  const excerptValue = "{{ discussion.excerpt }}";
+  excerptField.value = excerptValue;
+</script>
 <script src="{% static 'js/comments.js' %}"></script>
-<script src="{% static 'js/alter_discussion.js' %}"></script>
+<script src="{% static 'js/alter_discussion.js' %}">
+</script>
 {% endblock %}
