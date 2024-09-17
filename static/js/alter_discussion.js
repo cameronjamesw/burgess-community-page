@@ -10,6 +10,7 @@ const discussionText = document.getElementById("id_content");
 const discussionTitleField = document.getElementById("id_title");
 const discussionTitle = document.getElementById("discussionTitle");
 const discussionContent = document.getElementById("discussionContent");
+const deleteDiscussionConfirm = document.getElementById("deleteDiscussionConfirm");
 
 /** These variables refer to the modals  */
 const editDiscussionModal = new bootstrap.Modal(document.getElementById("editDiscussionModal"));
@@ -30,11 +31,12 @@ editDiscussionBtn.addEventListener("click", (e) => {
 
     submitBtn.innerText = "Update";
 
-    discussionForm.setAttribute("action", `edit_discussion/`);
+    discussionForm.setAttribute("action", 'edit_discussion/');
 
     editDiscussionModal.show();
 });
 
 delDiscussionBtn.addEventListener("click", (e) => {
+    deleteDiscussionConfirm.href = 'delete_discussion/'
     deleteDiscussionModal.show();
-})
+});
