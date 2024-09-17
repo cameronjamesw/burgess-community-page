@@ -1,6 +1,7 @@
 /** These variables refer to the selected buttons */
 
 const editDiscussionBtn = document.getElementById("editDiscussionBtn");
+const delDiscussionBtn = document.getElementById("delDiscussionBtn");
 const submitBtn = document.getElementById("submitBtn");
 
 /** These variables refer to the selected text fields */
@@ -31,3 +32,7 @@ editDiscussionBtn.addEventListener("click", (e) => {
 
     editDiscussionModal.show();
 });
+
+delDiscussionBtn.addEventListener("click", (e) => {
+    console.log("You have clicked the Delete Discussion Button!!");
+})
