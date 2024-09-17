@@ -136,4 +136,4 @@ def discussion_delete(request, slug):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own discussions!')
 
-        return render (request, 'discussion/index.html')
+    return HttpResponseRedirect(reverse('home'))
