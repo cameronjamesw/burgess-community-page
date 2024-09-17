@@ -113,7 +113,7 @@ def discussion_edit(request, slug):
 
     if request.method == "POST":
         queryset = Discussion.objects.all()
-        discussion = get_object_or_404(queryset, slug)
+        discussion = get_object_or_404(queryset, slug=slug)
         discussion_forn = DiscussionForm(data=request.POST, instance=discussion)
 
         if discussion_forn.is_valid() and discussion.author == request.user:
@@ -124,5 +124,5 @@ def discussion_edit(request, slug):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating discussion!')
 
-        return HttpResponseRedirect(reverse('discussion_content', args=[slug]))
+        return HttpResponseRedirect(reverse('discussion_content', slug=slug))
 
