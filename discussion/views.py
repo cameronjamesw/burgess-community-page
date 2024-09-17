@@ -126,3 +126,14 @@ def discussion_edit(request, slug):
 
         return HttpResponseRedirect(reverse('discussion_content', slug=slug))
 
+def discussion_delete(request, slug):
+    queryset = Discussion.objects.all()
+    discussion = get_object_or_404(queryset, slug=slug)
+
+    if discussion.author == request.user:
+        discussion.delete()
+        messages.add_message(request, messages.SUCCESS, 'Discussion successfully deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own discussions!')
+
+        return HttpResponseRedirect(reverse('home'))
