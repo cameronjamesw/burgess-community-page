@@ -3,6 +3,7 @@
 const editDiscussionBtn = document.getElementById("editDiscussionBtn");
 const delDiscussionBtn = document.getElementById("delDiscussionBtn");
 const submitBtn = document.getElementById("submitBtn");
+const delDiscussionConfirm = document.getElementById("deleteDiscussionConfirm");
 
 /** These variables refer to the selected text fields */
 const discussionText = document.getElementById("id_content");
@@ -12,6 +13,7 @@ const discussionContent = document.getElementById("discussionContent");
 
 /** These variables refer to the modals  */
 const editDiscussionModal = new bootstrap.Modal(document.getElementById("editDiscussionModal"));
+const deleteDiscussionModal = new bootstrap.Modal(document.getElementById("deleteDiscussionModal"));
 
 const discussionForm = document.getElementById("discussionForm");
 
@@ -34,5 +36,5 @@ editDiscussionBtn.addEventListener("click", (e) => {
 });
 
 delDiscussionBtn.addEventListener("click", (e) => {
-    console.log("You have clicked the Delete Discussion Button!!");
+    deleteDiscussionModal.show();
 })
