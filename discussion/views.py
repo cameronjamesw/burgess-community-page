@@ -111,5 +111,18 @@ def discussion_edit(request, slug):
     This is the view to edit an exisitng discussion.
     """
 
-    queryset = Discussion.objects.all()
-    discussion = get_object_or_404(queryset, slug)
+    if request.method == "POST":
+        queryset = Discussion.objects.all()
+        discussion = get_object_or_404(queryset, slug)
+        discussion_forn = DiscussionForm(data=request.POST, instance=discussion)
+
+        if discussion_forn.is_valid() and discussion.author == request.user:
+            discussion = discussion_forn.save(commit=False)
+            discussion.approved = False
+            discussion.save()
+            messages.add_message(request, messages.SUCCESS, 'Discussion Successfully Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating discussion!')
+
+        return HttpResponseRedirect(reverse('discussion_content', args=[slug]))
+

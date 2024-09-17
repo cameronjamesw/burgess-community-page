@@ -12,6 +12,8 @@ const discussionContent = document.getElementById("discussionContent");
 /** These variables refer to the modals  */
 const editDiscussionModal = new bootstrap.Modal(document.getElementById("editDiscussionModal"));
 
+const discussionForm = document.getElementById("discussionForm");
+
 /** This event listener shows the Edit Discussion Modal
  * as well as changing the values of the form fields to
  * the current values of the discussion.
@@ -24,6 +26,8 @@ editDiscussionBtn.addEventListener("click", (e) => {
     discussionTitleField.value = discussionTitleValue;
 
     submitBtn.innerText = "Update";
+
+    discussionForm.setAttribute("action", `edit_discussion/`);
 
     editDiscussionModal.show();
 });
