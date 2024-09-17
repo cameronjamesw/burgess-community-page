@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'discussion',
+    'profile_page',
 ]
 
 SITE_ID = 1
