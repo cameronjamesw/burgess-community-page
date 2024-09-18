@@ -6,14 +6,16 @@
 <section class="fire-background">
     <div class="overlay container-fluid mt-5 pb-5" id="profile-card">
         {% if user.is_authenticated %}
-        <div class="card col-8 offset-2 mb-3">
+        {% for profile in profiles %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="card col-8 offset-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="{% static 'images/sample_photo_1.jpg' %}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h2 class="card-title">Name: {{ user }} | Years at Camp: {{ profile.tenure }}!</h2>
+                        <h2 class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}!</h2>
                         <h4 class="card-text">Position: {{ profile.position }}</h4>
                         <p class="card-text"><span class="fw-bold">Favourite Memory:</span> {{ profile.memory }}</p>
                         <p class="card-text"><span class="fw-bold">Fun Facts:</span> {{ profile.facts }}</p>
@@ -21,14 +23,32 @@
                 </div>
             </div>
         </div>
-
         {% else %}
-        <div>
-            <h1>Create Profile?</h1>
-            <p>It looks like you don't have a profile just yet.</p>
-            <p>Do you want to create one?</p>
+        <div class="card col-8 offset-2 mb-5">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}!</h2>
+                        <h4 class="card-text">Position: {{ profile.position }}</h4>
+                        <p class="card-text"><span class="fw-bold">Favourite Memory:</span> {{ profile.memory }}</p>
+                        <p class="card-text"><span class="fw-bold">Fun Facts:</span> {{ profile.facts }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/sample_photo_1.jpg' %}" class="img-fluid rounded-start" alt="...">
+                </div>
+            </div>
         </div>
-        {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% else %}
+    </div>
+    <div>
+        <h1>Create Profile?</h1>
+        <p>It looks like you don't have a profile just yet.</p>
+        <p>Do you want to create one?</p>
+    </div>
+    {% endif %}
     </div>
 </section>
 

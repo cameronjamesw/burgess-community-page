@@ -5,12 +5,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def display_profile(request):
-    user = request.user
-    queryset = User_Profile.objects.all()
-    profile = get_object_or_404(queryset)
+    profiles = User_Profile.objects.all()
 
     context = {
-        "profile": profile
+        "profiles": profiles
     }
 
     return render(
