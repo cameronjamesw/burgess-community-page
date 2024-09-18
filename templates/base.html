@@ -46,7 +46,7 @@
                 href="{% url 'home' %}">Home</a>
             </li>
             <li>
-              <a href="#">Profile</a>
+              <a href="{% url 'profile_page' %}">Profile</a>
             </li>
             {% if user.is_authenticated %}
             <li>
