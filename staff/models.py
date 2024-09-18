@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 CAMPS = ((0, "Burgess"), (1, "Hayward"))
 # Create your models here.
 
-class User_Profile(models.Model):
+class Staff_Member(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE
     )

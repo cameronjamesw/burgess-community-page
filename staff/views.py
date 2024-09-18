@@ -1,18 +1,18 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from .models import User_Profile
+from .models import Staff_Member
 from django.http import HttpResponse
 
 # Create your views here.
 
-def display_profile(request):
-    profiles = User_Profile.objects.all()
+def display_staff(request):
+    staff_profiles = Staff_Member.objects.all()
 
     context = {
-        "profiles": profiles
+        "staff_profiles": staff_profiles
     }
 
     return render(
         request,
-        "profile/user_profile.html",
+        "staff/staff_profile.html",
         context
     )

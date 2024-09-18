@@ -6,7 +6,7 @@
 <section class="fire-background">
     <div class="overlay container-fluid mt-5 pb-5" id="profile-card">
         {% if user.is_authenticated %}
-        {% for profile in profiles %}
+        {% for profile in staff_profiles %}
         {% if forloop.counter|divisibleby:2 %}
         <div class="card col-8 offset-2 mb-5">
             <div class="row g-0">
