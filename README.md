@@ -123,6 +123,36 @@ The color scheme that I have used is one that I feel best represents the camp cu
 
 ## Wireframes
 
+Below are a list of the wireframes I have created for inspiration to follow for the project.
+
+### Mobile Wireframes
+
+- Here is the mobile wireframe for the home page.
+
+![A wireframe for the home page when displayed on a mobile device.](documentation/wireframes/home_phone.png)
+
+- Here is the mobile wireframe for the discussion content page when being viewed on a mobile device.
+
+![A wireframe for the discussion content page when being displayed on a mobile device.](documentation/wireframes/disc_content_phone.png)
+
+- Here is the mobile wireframe for the staff profile page when being viewed on a mobile device.
+
+![A wireframe for the staff profile page when being displayed on a mobile device.](documentation/wireframes/profile_phone.png)
+
+### Desktop Wireframes
+
+- Here is the desktop wireframe for the home page.
+
+![A wireframe for the home page when displayed on a desktop.](documentation/wireframes/home_page.png)
+
+- Here is the wireframe for the discussion content page when being viewed on a desktop.
+
+![A wireframe for the discussion content page when being displayed on a desktop.](documentation/wireframes/disc_content.png)
+
+- Here is the wireframe for the staff profile page when being viewed on a desktop.
+
+![A wireframe for the staff profile page when being displayed on a desktop.](documentation/wireframes/profile.png)
+
 ## Flow Diagram
 
 ## Database Plan
