@@ -1,9 +1,9 @@
 # Burgess Community Page
 
-Picture of the finished project
+![A photo of the Burgess Community Page being displayed on AmiResponsive](/documentation/images/amiresponsive.png)
 
 
-Live site can be viewed here - link
+Live site can be viewed here - [Burgess Community Page](https://burgess-community-22799d4a8274.herokuapp.com/)
 
 # Contents
 
