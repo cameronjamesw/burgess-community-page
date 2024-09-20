@@ -26,7 +26,7 @@ Live site can be viewed here - link
     * [Sign Up / Registration](#sign-up--registration)
     * [Creating a Discussion](#creating-a-discussion)
     * [Commenting on a Discussion](#commenting-on-a-discussion)
-    * [Profile Customisation](#profile-customisation)
+    * [Staff Profile / Profile Customisation](#staff-profile--profile-customisation)
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
 * [Programming Languages, Frameworks & Libraries Used](#programming-languages-libraries--frameworks-used)
@@ -188,7 +188,7 @@ In the event of the discussion being deleted, all related comments to said discu
 
 ![A screenshot of the form where users are able to post comments on discussions](documentation/images/create-comment-ss.png)
 
-## Profile Customisation
+## Staff Profile / Profile Customisation
 
 ## Future Features
 
