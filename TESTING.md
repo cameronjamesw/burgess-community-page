@@ -7,6 +7,7 @@ Live site can be viewed here - link
 
 # Contents
 
+* [Introduction](#introduction)
 * [Manual Testing](#manual-testing)
 * [User](#user)
 * [Bugs](#bugs)
@@ -15,6 +16,8 @@ Live site can be viewed here - link
     * [HTML](#html)
     * [CSS](#css)
 * [Python Testing](#python-testing)
+
+# Introduction
 
 # Manual Testing
 
