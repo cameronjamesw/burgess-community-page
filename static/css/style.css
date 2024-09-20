@@ -86,20 +86,6 @@ footer {
     list-style-type: none;
 }
 
-#footer-list > li {
-    color: #fff;
-    font-size: 150%;
-}
-
-#copyright {
-    align-items: flex-end;
-    color: #fff;
-    list-style-type: none;
-    font-size: 150%;
-}
-
-
-
 /* These styles refer to the home page */
 
 #hero-image {
