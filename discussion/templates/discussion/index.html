@@ -20,10 +20,10 @@
             {% for discussion in discussions %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3">
                 <div class="card mb-4" id="discussion-card">
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img-top" id="card-img" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                    {% if "placeholder" in discussion.featured_image.url %}
+                    <img class="card-img-top" id="card-img" src="{% static 'images/sample_photo.png' %}" alt="placeholder image">
                     {% else %}
-                    <img class="card-img-top" id="card-img" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                    <img class="card-img-top" id="card-img" src=" {{ discussion.featured_image.url }}" alt="{{ discussion.title }}">
                     {% endif %}
                     <div class="card-body">
                         <h4 class="card-title">{{discussion.title}}</h4>
