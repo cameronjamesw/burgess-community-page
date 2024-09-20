@@ -7,7 +7,7 @@
     <div class="overlay container-fluid mt-5 pb-5" id="profile-card">
         {% for profile in staff_profiles %}
         {% if forloop.counter|divisibleby:2 %}
-        <div class="card col-8 offset-2 mb-5">
+        <div class="card col-10 offset-1 col-md-8 offset-md-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-4">
                     {% if "placeholder" in profile.photo.url %}
@@ -29,7 +29,7 @@
             </div>
         </div>
         {% else %}
-        <div class="card col-8 offset-2 mb-5">
+        <div class="card col-10 offset-1 col-md-8 offset-md-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-8">
                     <div class="card-body">
