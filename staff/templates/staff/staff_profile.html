@@ -11,7 +11,13 @@
         <div class="card col-8 offset-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="{% static 'images/sample_photo_1.jpg' %}" class="img-fluid rounded-start" alt="...">
+                    {% if "placeholder" in profile.photo.url %}
+                    <img class="img-fluid rounded-start" src="{% static 'images/stock_photo.jpg' %}"
+                        alt="placeholder image">
+                    {% else %}
+                    <img class="img-fluid rounded-start" src=" {{ profile.photo.url }}"
+                        alt="{{ profile.user }} display photo">
+                    {% endif %}
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -35,13 +41,19 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="{% static 'images/sample_photo_1.jpg' %}" class="img-fluid rounded-start" alt="...">
+                    {% if "placeholder" in profile.photo.url %}
+                    <img class="img-fluid rounded-start" src="{% static 'images/stock_photo.jpg' %}"
+                        alt="placeholder image">
+                    {% else %}
+                    <img class="img-fluid rounded-start" src=" {{ profile.photo.url }}"
+                        alt="{{ profile.user }} display photo">
+                    {% endif %}
                 </div>
             </div>
         </div>
-    {% endif %}
-    {% endfor %}
-    {% else %}
+        {% endif %}
+        {% endfor %}
+        {% else %}
     </div>
     <div>
         <h1>Create Profile?</h1>
