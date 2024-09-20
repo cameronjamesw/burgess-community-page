@@ -68,9 +68,11 @@
             </li>
             {% endif %}
           </ul>
+          {% if user.is_authenticated %}
           <div>
             <h3 class="text-uppercase">Logged in as: {{user}}</h3>
           </div>
+          {% endif %}
         </div>
     </nav>
     <!-- displaying Django messages -->
