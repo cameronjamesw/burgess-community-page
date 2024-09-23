@@ -3,11 +3,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<!-- This is the hero image -->
 <section class="container-fluid" id="hero-image">
     <div class="container-lg text-center" id="hero-text">
+        <!-- This is the hero text -->
         <h3 class="text-uppercase">Camp Burgess & Hayward community page</h3>
         <p>For the use of the '24 staff</p>
         {% if user.is_authenticated %}
+        <!-- This button only appears if user is authenticated -->
         <button class="btn btn-lg btn-success" id="createDiscussionButton">Create Discussion</button>
         {% endif %}
     </div>
@@ -17,20 +20,24 @@
     <br>
     <div class="col-12 left">
         <div class="row">
+            <!-- For each discussion, this HTML block is replicated -->
             {% for discussion in discussions %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3">
                 <div class="card mb-4" id="discussion-card">
                     {% if "placeholder" in discussion.featured_image.url %}
+                    <!-- This is the image for the discussion -->
                     <img class="card-img-top" id="card-img" src="{% static 'images/sample_photo.png' %}" alt="placeholder image">
                     {% else %}
                     <img class="card-img-top" id="card-img" src=" {{ discussion.featured_image.url }}" alt="{{ discussion.title }}">
                     {% endif %}
                     <div class="card-body">
+                        <!-- These are the discussions properties -->
                         <h4 class="card-title">{{discussion.title}}</h4>
                         <h5 class="card-title">{{discussion.author}}</h5>
                         <p class="card-text">{{discussion.excerpt}}</p>
                         <div class="d-flex mb-3">
                             <div class="me-auto">
+                                <!-- This anchor points to the specific discussion's URL -->
                                 <a href="{% url 'disc_content' discussion.slug %}"
                                     class="btn btn-success justify-content-start">View Post</a>
                             </div>
@@ -67,5 +74,6 @@
 {% endblock %}
 
 {% block extras %}
+<!-- This is the link to the javascript file -->
 <script src="{% static 'js/discussion.js' %}"></script>
 {% endblock %}
