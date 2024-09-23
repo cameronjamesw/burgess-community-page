@@ -3,24 +3,30 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<!-- This is the fire background that frames the content -->
 <section class="fire-background">
+
   <!-- This section refers to the discussion content -->
   <div class="container-fluid mt-5 pb-5">
     <div class="row">
       <div class="card col-10 offset-1 col-md-8 offset-md-2 text-white" id="image-overlay">
-        <div class="card-img p-2" >
+        <div class="card-img p-2">
+          <!-- If the user is the author of the discussion, edit and delete buttons will be displayed -->
           {% if user.is_authenticated and discussion.author == user %}
           <div class="d-flex mb-3">
             <h1 class="card-title text-decoration-underline me-auto" id="discussionTitle">{{discussion.title}}</h1>
             <div class="justify-self-end">
+              <!-- These are the edit and delete buttons -->
               <button id="editDiscussionBtn" class="me-md-2 btn btn-success"><i
                   class="fa-regular fa-pen-to-square"></i></button>
               <button id="delDiscussionBtn" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
             </div>
           </div>
           {% else %}
+          <!-- If user is not the author, a standard header for the discussion will be displayed -->
           <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
           {% endif %}
+          <!-- This is the discussion content -->
           <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
           <p class="card-text" id="discussionContent">{{discussion.content}}</p>
           <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
@@ -30,52 +36,56 @@
           <!-- Displaying Comments -->
           <div>
             <div class="mx-4"> <strong class="text-secondary">
+              <!-- This is the comment icon -->
                 <i class="far fa-comments"></i> {{ comment_count }}
               </strong>
               <h2>Comments:</h2>
               <div>
+                <!-- For every comment, this block of code will be displayed -->
                 {% for comment in comments %}
+                <!-- This class only displays unapproved comments to the comment's author -->
                 <div class="bg-secondary text-white border-light card p-1 comments
                 {% if not comment.approved and comment.author == user %}
                 faded{% elif not comment.approved %} d-none{% endif %}">
                   {% if user.is_authenticated and comment.author == user %}
+                  <!-- This code allows the user to edit and delete their own comments -->
                   <div class="d-flex gap-2 my-1">
-                  <div class="me-auto fw-medium text-decoration-underline bs-dark card-header">
-                    {{ comment.author }}
+                    <div class="me-auto fw-medium text-decoration-underline bs-dark card-header">
+                      {{ comment.author }}
+                    </div>
+                    <button class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
+                        class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i
+                        class="fa-regular fa-trash-can"></i></button>
                   </div>
-                  <button class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
-                      class="fa-regular fa-pen-to-square"></i></button>
-                  <button class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i
-                      class="fa-regular fa-trash-can"></i></button>
+                  {% else %}
+                  <div class="fw-medium text-decoration-underline bs-dark card-header"></div>
+                  {{ comment.author }}
                 </div>
-                {% else %}
-                <div class="fw-medium text-decoration-underline bs-dark card-header"></div>
-                {{ comment.author }}
-              </div>
-              {% endif %}
-              <div class="card-body bg-dark">
-                {% if not comment.approved and comment.author == user %}
-                <p class="text-danger-emphasis mark">
-                  This comment is awaiting approval
-                </p>
                 {% endif %}
-                <blockquote class="mb-0 text-white">
-                  <div id="comment{{ comment.id }}">
-                    <p>{{ comment.body | linebreaks }}</p>
-                  </div>
-                  <p class="blockquote-footer text-primary">Posted on <cite title="Source Title">
-                      {{comment.created_on}}</cite></p>
-                </blockquote>
+                <div class="card-body bg-dark">
+                  {% if not comment.approved and comment.author == user %}
+                  <p class="text-danger-emphasis mark">
+                    This comment is awaiting approval
+                  </p>
+                  {% endif %}
+                  <blockquote class="mb-0 text-white">
+                    <div id="comment{{ comment.id }}">
+                      <p>{{ comment.body | linebreaks }}</p>
+                    </div>
+                    <p class="blockquote-footer text-primary">Posted on <cite title="Source Title">
+                        {{comment.created_on}}</cite></p>
+                  </blockquote>
+                </div>
               </div>
+              <br>
+              <!-- Our for loop ends here -->
+              {% endfor %}
             </div>
-            <br>
-            <!-- Our for loop ends here -->
-            {% endfor %}
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- Creating New Comments -->
   <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark">
@@ -83,12 +93,14 @@
       <h2>Add a Comment:</h2>
       {% if user.is_authenticated %}
       <p>Posting as: {{ user.username }}</p>
+      <!-- This is the comment form to create new comments -->
       <form id="commentForm" method="post" style="margin-top: 1.3em;">
         {{ comment_form | crispy }}
         {% csrf_token %}
         <button id="submitButton" type="submit" class="btn btn-signup btn-dark btn-lg">Submit</button>
       </form>
       {% else %}
+      <!-- If user is not authenticated, they are prompted to log in to leave a comment -->
       <p><a class="text-white" href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
       {% endif %}
     </div>
@@ -128,6 +140,7 @@
       </div>
       <div class="modal-body text-white">
         <form method="POST" id="discussionForm">
+          <!-- This is the form that allows the user to edit their discussion -->
           {{ discussion_form | crispy }}
           {% csrf_token %}
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -163,10 +176,16 @@
 
 {% block extras %}
 <script>
+  /** 
+   * This script defines the excerpt variables by using Django
+   * Template Language, and if then manipulated by alter_discussion.js
+  */
   const excerptField = document.getElementById("id_excerpt");
   const excerptValue = "{{ discussion.excerpt }}";
   excerptField.value = excerptValue;
 </script>
+
+<!-- These scripts point to the relevent JavaScript files -->
 <script src="{% static 'js/comments.js' %}"></script>
 <script src="{% static 'js/alter_discussion.js' %}">
 </script>
