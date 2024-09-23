@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 
+# This is the Discussion Model
 class Discussion(models.Model):
     title = models.CharField(max_length=150, unique=True)
     slug = models.SlugField(max_length=150, unique=True)
@@ -25,6 +26,7 @@ class Discussion(models.Model):
     def __str__(self):
         return f"{self.title} | Written by {self.author}"
 
+# This is the Comment Modle 
 class Comment(models.Model):
     discussion = models.ForeignKey(
         Discussion, on_delete=models.CASCADE, related_name="comments"
