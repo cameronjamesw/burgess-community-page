@@ -37,7 +37,7 @@
                         aria-labelledby="profileUserTenure profilePosition profileMemory profileFacts">
                         {% if not profile.approved and profile.user == user %}
                         <p
-                            class="alert alert-warning border border-dark position-absolute opacity-75 top-0 fw-bolder mt-2">
+                            class="alert alert-warning border border-dark position-absolute opacity-75 top-0 start-0 fw-bolder mt-2">
                             Awaiting approval</p>
                         {% endif %}
                         <h2 id="profileUserTenure" class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
