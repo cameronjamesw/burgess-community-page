@@ -36,6 +36,10 @@ editDiscussionBtn.addEventListener("click", (e) => {
     editDiscussionModal.show();
 });
 
+/**
+ * This event listener shows the Delete Discussion Modal when
+ * delete discussion is clicked by the user
+ */
 delDiscussionBtn.addEventListener("click", (e) => {
     deleteDiscussionConfirm.href = 'delete_discussion/'
     deleteDiscussionModal.show();
