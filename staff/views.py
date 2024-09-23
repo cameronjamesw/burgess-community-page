@@ -9,8 +9,6 @@ from .forms import ProfileForm
 # This view is to display the staff profiles
 def display_staff(request):
     staff_profiles = Staff_Member.objects.all()
-    user = request.user
-    users = Staff_Member.objects.filter(user=user)
 
     # This empty list is populated with users upon the view loading
     current_profiles = []
