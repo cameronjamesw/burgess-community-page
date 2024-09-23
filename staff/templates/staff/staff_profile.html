@@ -23,6 +23,8 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <!-- This code refers to the profile photo -->
+
+                    <!-- This code adds an awaiting approval message -->
                      {% if not profile.approved and profile.user == user %}
                         <p
                             class="alert alert-warning border border-dark position-absolute opacity-75 top-0 start-0 fw-bolder mt-2">
@@ -67,6 +69,8 @@
                 </div>
                 <div class="col-md-4 position-relative">
                     <!-- This code refers to the profile image -->
+
+                    <!-- This code adds an awaiting approval message -->
                     {% if not profile.approved and profile.user == user %}
                     <p
                         class="alert alert-warning border border-dark position-absolute opacity-75 top-0 end-0 fw-bolder mt-2">
