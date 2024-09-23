@@ -120,11 +120,11 @@ def discussion_edit(request, slug):
             discussion = discussion_forn.save(commit=False)
             discussion.approved = False
             discussion.save()
-            messages.add_message(request, messages.SUCCESS, 'Discussion Successfully Updated!')
+            messages.add_message(request, messages.SUCCESS, 'Discussion updated, now awaiting approval!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating discussion!')
 
-        return HttpResponseRedirect(reverse('discussion_content', slug=slug))
+        return HttpResponseRedirect(reverse('home'))
 
 def discussion_delete(request, slug):
     queryset = Discussion.objects.all()
