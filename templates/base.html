@@ -91,11 +91,19 @@
     <!-- Displaying Django messages -->
     <div class="col-8 offset-2 z-3 alert-success rounded-3 position-absolute top-50">
       {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
       <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible alert-success fade show" id="msg"
         role="alert">
         <i class="fa-regular fa-square-check"></i> {{ message | safe }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+      {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+      <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible alert-danger fade show" id="msg"
+        role="alert">
+        <i class="fa-regular fa-square-check"></i> {{ message | safe }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endif %}
       {% endfor %}
     </div>
 
