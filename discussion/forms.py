@@ -6,11 +6,8 @@ class DiscussionForm(forms.ModelForm):
     class Meta:
         model = Discussion
         fields = ('title', 'featured_image', 'excerpt', 'content')
-        lables = {
+        labels = {
             'featured_image': 'Discussion Photo',
-            'title': 'Title',
-            'excerpt': 'Excerpt',
-            'content': 'Content'
         }
         
 
