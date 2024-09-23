@@ -3,13 +3,18 @@
 
 {% block content %}
 
+<!-- This is the fire background that frames the content -->
 <section class="fire-background">
     <div class="overlay container-fluid mt-5 pb-5" id="profile-card">
+        <!-- For every profile in staff profiles, this code is executed -->
         {% for profile in staff_profiles %}
+
+        <!-- This counter changes the layout of the profile cards depending on their index -->
         {% if forloop.counter|divisibleby:2 %}
         <div class="card col-10 offset-1 col-md-8 offset-md-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-4">
+                    <!-- This code refers to the profile photo -->
                     {% if "placeholder" in profile.photo.url %}
                     <img class="img-fluid rounded-start" src="{% static 'images/stock_photo.jpg' %}"
                         alt="placeholder image">
@@ -19,6 +24,7 @@
                     {% endif %}
                 </div>
                 <div class="col-md-8">
+                    <!-- This code refers to the body of the profile card -->
                     <div class="card-body">
                         <h2 class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
                         <h4 class="card-text">Position: {{ profile.position }}</h4>
@@ -28,10 +34,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- This else statement executes the same code as above, except the orientation is flipped -->
         {% else %}
         <div class="card col-10 offset-1 col-md-8 offset-md-2 mb-5">
             <div class="row g-0">
                 <div class="col-md-8">
+                    <!-- This code refers to the proife body -->
                     <div class="card-body">
                         <h2 class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
                         <h4 class="card-text">Position: {{ profile.position }}</h4>
@@ -40,6 +49,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
+                    <!-- This code refers to the profile image -->
                     {% if "placeholder" in profile.photo.url %}
                     <img class="img-fluid rounded-start" src="{% static 'images/stock_photo.jpg' %}"
                         alt="placeholder image">
@@ -50,7 +60,10 @@
                 </div>
             </div>
         </div>
+        <!-- End statement for index counter -->
         {% endif %}
+
+        <!-- End statement for profile for loop -->
         {% endfor %}
     </div>
     </div>
