@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- This is the fire background that frames the content -->
-<section class="fire-background">
+<section class="fire-background" aria-label="A section with a fire as the background image">
 
   <!-- This section refers to the discussion content -->
   <div class="container-fluid mt-5 pb-5">
@@ -13,9 +13,9 @@
         <div class="card-img p-2">
           <!-- If the user is the author of the discussion, edit and delete buttons will be displayed -->
           {% if user.is_authenticated and discussion.author == user %}
-          <div class="d-flex mb-3">
+          <div class="d-flex mb-3" aria-labelledby="discussionTitle editDeleteButtons discussionContent lastUpdated discussionAuthor">
             <h1 class="card-title text-decoration-underline me-auto" id="discussionTitle">{{discussion.title}}</h1>
-            <div class="justify-self-end">
+            <div class="justify-self-end" id="editDeleteButtons" aria-labelledby="editDiscussionBtn delDiscussionBtn">
               <!-- These are the edit and delete buttons -->
               <button id="editDiscussionBtn" class="me-md-2 btn btn-success"><i
                   class="fa-regular fa-pen-to-square"></i></button>
@@ -24,12 +24,12 @@
           </div>
           {% else %}
           <!-- If user is not the author, a standard header for the discussion will be displayed -->
-          <h1 class="card-title text-decoration-underline">{{discussion.title}}</h1>
+          <h1 id="discussionTitle" class="card-title text-decoration-underline">{{discussion.title}}</h1>
           {% endif %}
           <!-- This is the discussion content -->
-          <h5 class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
-          <p class="card-text" id="discussionContent">{{discussion.content}}</p>
-          <p class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
+          <h5 id="discussionAuthor" class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
+          <p id="discussionContent" class="card-text" id="discussionContent">{{discussion.content}}</p>
+          <p id="lastUpdated" class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
 
           <hr>
 
@@ -37,7 +37,7 @@
           <div>
             <div class="mx-4"> <strong class="text-secondary">
               <!-- This is the comment icon -->
-                <i class="far fa-comments"></i> {{ comment_count }}
+                <i aria-label="An icon showing the amount of comments" class="far fa-comments"></i> {{ comment_count }}
               </strong>
               <h2>Comments:</h2>
               <div>
@@ -49,23 +49,23 @@
                 faded{% elif not comment.approved %} d-none{% endif %}">
                   {% if user.is_authenticated and comment.author == user %}
                   <!-- This code allows the user to edit and delete their own comments -->
-                  <div class="d-flex gap-2 my-1">
-                    <div class="me-auto fw-medium text-decoration-underline bs-dark card-header">
+                  <div class="d-flex gap-2 my-1" aria-labelledby="commentAuthor editComment deleteComment">
+                    <div id="commentAuthor" class="me-auto fw-medium text-decoration-underline bs-dark card-header">
                       {{ comment.author }}
                     </div>
-                    <button class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
+                    <button id="editComment" class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
                         class="fa-regular fa-pen-to-square"></i></button>
-                    <button class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i
+                    <button id="deleteComment" class="btn btn-danger btn-delete" comment_id="{{ comment.id }}"><i
                         class="fa-regular fa-trash-can"></i></button>
                   </div>
                   {% else %}
-                  <div class="fw-medium text-decoration-underline bs-dark card-header"></div>
+                  <div id="commentAuthor" class="fw-medium text-decoration-underline bs-dark card-header">
                   {{ comment.author }}
                 </div>
                 {% endif %}
-                <div class="card-body bg-dark">
+                <div class="card-body bg-dark" aria-labelledby="waitingApproval">
                   {% if not comment.approved and comment.author == user %}
-                  <p class="text-danger-emphasis mark">
+                  <p id="waitingApproval" class="text-danger-emphasis mark">
                     This comment is awaiting approval
                   </p>
                   {% endif %}
@@ -88,11 +88,11 @@
     </div>
   </div>
   <!-- Creating New Comments -->
-  <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark">
-    <div class="card-body" id="comment_form">
-      <h2>Add a Comment:</h2>
+  <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark" aria-labelledby="comment_form">
+    <div class="card-body" id="comment_form" aria-labelledby="addComment commentAuthor commentForm submitButton leaveComment">
+      <h2 id="addComment">Add a Comment:</h2>
       {% if user.is_authenticated %}
-      <p>Posting as: {{ user.username }}</p>
+      <p id="commentAuthor">Posting as: {{ user.username }}</p>
       <!-- This is the comment form to create new comments -->
       <form id="commentForm" method="post" style="margin-top: 1.3em;">
         {{ comment_form | crispy }}
@@ -101,7 +101,7 @@
       </form>
       {% else %}
       <!-- If user is not authenticated, they are prompted to log in to leave a comment -->
-      <p><a class="text-white" href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
+      <p id="leaveComment"><a class="text-white" href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
       {% endif %}
     </div>
   </div>
@@ -131,11 +131,11 @@
 </div>
 
 <!-- This is the modal to edit a discussion -->
-<div class="modal fade" id="editDiscussionModal" tabindex="-2">
+<div class="modal fade" id="editDiscussionModal" tabindex="-2" aria-labelledby="editDiscusssion">
   <div class="modal-dialog bg-dark rounded-3 border border-light-subtle">
     <div class="modal-content bg-dark">
       <div data-bs-theme="dark" class="modal-header bg-dark">
-        <h3 class="modal-title text-white">Edit Discussion</h3>
+        <h3 id="editDiscusssion" class="modal-title text-white">Edit Discussion</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-white">
