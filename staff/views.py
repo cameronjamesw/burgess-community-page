@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+# This view is to display the staff profiles
 def display_staff(request):
     staff_profiles = Staff_Member.objects.all()
 
