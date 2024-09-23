@@ -25,6 +25,7 @@
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3 {% if not discussion.approved and discussion.author == user %}
             faded{% elif not discussion.approved %} d-none{% endif %}">
                 <div class="card mb-4" id="discussion-card">
+                    <!-- This code adds an awaiting approval message -->
                     {% if not discussion.approved and discussion.author == user %}
                     <p
                         class="alert alert-warning border border-dark position-absolute top-0 end-0 fw-bolder mt-2">
