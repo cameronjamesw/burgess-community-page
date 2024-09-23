@@ -75,8 +75,9 @@
           {% endif %}
         </div>
     </nav>
-    <!-- displaying Django messages -->
-    <div class="col-md-8 offset-md-2 z-3 alert-success rounded-3 position-absolute top-50">
+
+    <!-- Displaying Django messages -->
+    <div class="col-8 offset-2 z-3 alert-success rounded-3 position-absolute top-50">
       {% for message in messages %}
       <div data-bs-theme="dark" class="alert {{ message.tags }} alert-dismissible alert-success fade show" id="msg"
         role="alert">
