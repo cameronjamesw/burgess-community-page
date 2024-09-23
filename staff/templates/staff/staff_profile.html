@@ -7,6 +7,12 @@
 <!-- This is the fire background that frames the content -->
 <section class="fire-background" aria-label="Fire background which frames content">
     <div class="overlay container-fluid mt-5 pb-5" id="profile-card">
+
+        {% if user.is_authenticated %}
+        <div class="col-10 offset-1 col-md-8 offset-md-2 d-flex flex-row-reverse pb-3">
+            <button class="btn btn-success">Create Profile</button>
+        </div>
+        {% endif %}
         <!-- For every profile in staff profiles, this code is executed -->
         {% for profile in staff_profiles %}
 
