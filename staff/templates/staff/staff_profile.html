@@ -23,6 +23,11 @@
             <div class="row g-0">
                 <div class="col-md-4">
                     <!-- This code refers to the profile photo -->
+                     {% if not profile.approved and profile.user == user %}
+                        <p
+                            class="alert alert-warning border border-dark position-absolute opacity-75 top-0 start-0 fw-bolder mt-2">
+                            Awaiting approval</p>
+                        {% endif %}
                     {% if "placeholder" in profile.photo.url %}
                     <img class="img-fluid rounded-start" src="{% static 'images/stock_photo.jpg' %}"
                         alt="placeholder, default image">
@@ -35,11 +40,7 @@
                     <!-- This code refers to the body of the profile card -->
                     <div class="card-body position-relative"
                         aria-labelledby="profileUserTenure profilePosition profileMemory profileFacts">
-                        {% if not profile.approved and profile.user == user %}
-                        <p
-                            class="alert alert-warning border border-dark position-absolute opacity-75 top-0 start-0 fw-bolder mt-2">
-                            Awaiting approval</p>
-                        {% endif %}
+                        
                         <h2 id="profileUserTenure" class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
                         <h4 id="profilePosition" class="card-text">Position: {{ profile.position }}</h4>
                         <p id="profileMemory" class="card-text"><span class="fw-bold">Favourite Memory:</span> {{ profile.memory }}</p>
