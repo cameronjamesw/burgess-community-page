@@ -12,13 +12,13 @@ def display_staff(request):
 
 # This if statement is regarding the Staff Profile Form 
     if request.method == 'POST':
-        profile_form = ProfileForm(data=request.post)
+        profile_form = ProfileForm(data=request.POST)
         if profile_form.is_valid():
             staff_profile = profile_form.save(commit=False)
             staff_profile.user = request.user
             staff_profile.save()
             messages.add_message(
-                request, messgaes.SUCCESS,
+                request, messages.SUCCESS,
                 "Staff profile successfully created!"
             )
         else:
