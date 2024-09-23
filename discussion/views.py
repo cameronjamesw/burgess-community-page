@@ -10,7 +10,7 @@ from .forms import DiscussionForm, CommentForm
 
 # This is the discussion list view
 def discussion_list(request):
-    discussions = Discussion.objects.filter(status=1, approved=True).order_by("-created_on")
+    discussions = Discussion.objects.all().order_by("-created_on")
    
     # This if statement refers to the Discussion Form
     if request.method == "POST":
