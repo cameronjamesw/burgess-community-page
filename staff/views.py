@@ -9,22 +9,40 @@ from .forms import ProfileForm
 # This view is to display the staff profiles
 def display_staff(request):
     staff_profiles = Staff_Member.objects.all()
+    user = request.user
+    users = Staff_Member.objects.filter(user=user)
 
-# This if statement is regarding the Staff Profile Form 
+    # This empty list is populated with users upon the view loading
+    current_profiles = []
+
+    for profile in staff_profiles:
+        current_profiles.append(profile.user)
+    
+
+    # This if statement is regarding the Staff Profile Form 
     if request.method == 'POST':
         profile_form = ProfileForm(data=request.POST)
-        if profile_form.is_valid():
-            staff_profile = profile_form.save(commit=False)
-            staff_profile.user = request.user
-            staff_profile.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                "Staff profile successfully created!"
-            )
+
+        # This if statement ensures there are no duplicate profiles
+        if request.user not in current_profiles:
+            print(request.user)
+            if profile_form.is_valid():
+                staff_profile = profile_form.save(commit=False)
+                staff_profile.user = request.user
+                staff_profile.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    "Staff profile successfully created!"
+                )
+            else:
+                messages.add_message(
+                    request, ERROR,
+                    "Error creating staff profile, please try again."
+                )
         else:
             messages.add_message(
-                request, ERROR,
-                "Error creating staff profile, please try again."
+                request, messages.ERROR,
+                "You can only have one profile!"
             )
 
 
