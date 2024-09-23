@@ -55,27 +55,27 @@
           <!-- This list refers to the navbar links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-              <a class="{% if request.path == home_url %}active{% endif %}" aria-current="page"
-                href="{% url 'home' %}">Home</a>
+              <a class="{% if request.path == home_url %}active{% endif %}" aria-label="Go to the home page"
+                aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li>
-              <a class="{% if request.path == staff_page_url %}active{% endif %}" aria-current="page"
-               href="{% url 'staff_page' %}">Staff</a>
+              <a class="{% if request.path == staff_page_url %}active{% endif %}" aria-label="Go to the staff page"
+                aria-current="page" href="{% url 'staff_page' %}">Staff</a>
             </li>
             {% if user.is_authenticated %}
             <!-- This link will only appear if the user is authenticated -->
             <li>
-              <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_logout' %}">Logout</a>
+              <a class="{% if request.path == logout_url %}active{% endif %}" aria-label="Go to the log out page"
+                aria-current="page" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
             <li>
               <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_signup' %}">Register</a>
+                aria-label="Go to the registration page" href="{% url 'account_signup' %}">Register</a>
             </li>
             <li>
               <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page"
-                href="{% url 'account_login' %}">Login</a>
+                aria-label="Go to the log in page" href="{% url 'account_login' %}">Login</a>
             </li>
             {% endif %}
           </ul>
@@ -107,19 +107,21 @@
   </main>
 
   <!-- This code refers to the footer -->
-  <footer class="footer mt-auto py-3 dark-bg">
-    <div class="d-flex justify-content-evenly text-white fs-4">
+  <footer class="footer mt-auto py-3 dark-bg" aria-labelledby="icons copyright">
+    <div id="icons" class="d-flex justify-content-evenly text-white fs-4">
       <!-- These are the social media links -->
-      <div><a class="text-light" href="https://www.facebook.com/BurgessHayward"><i
+      <div><a aria-label="Go to our Facebook page" class="text-light" href="https://www.facebook.com/BurgessHayward"><i
             class="fa-brands fa-square-facebook"></i></a></div>
-      <div><a class="text-light" href="https://www.instagram.com/campburgesshayward/"><i
-            class="fa-brands fa-instagram"></i></a></div>
-      <div><a class="text-light" href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
-      <div><a class="text-light" href="https://www.tiktok.com/@campdirector95"><i class="fa-brands fa-tiktok"></i></a>
+      <div><a aria-label="Go to the Instagram page" class="text-light"
+          href="https://www.instagram.com/campburgesshayward/"><i class="fa-brands fa-instagram"></i></a></div>
+      <div><a aria-label="Go to our Whatsapp page" class="text-light" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <div><a aria-label="Go to the TikTok page" class="text-light" href="https://www.tiktok.com/@campdirector95"><i
+            class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
     <!-- This is the Burgess & Hayward text -->
-    <div class="container-fluid text-white text-center d-none d-sm-block">
+    <div id="copyright" class="container-fluid text-white text-center d-none d-sm-block">
       <p>@ Camp Burgess & Hayward</p>
     </div>
   </footer>
