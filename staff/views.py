@@ -32,11 +32,11 @@ def display_staff(request):
                 staff_profile.save()
                 messages.add_message(
                     request, messages.SUCCESS,
-                    "Staff profile successfully created!"
+                    "Staff profile successfully created, awaiting approval!"
                 )
             else:
                 messages.add_message(
-                    request, ERROR,
+                    request, messages.ERROR,
                     "Error creating staff profile, please try again."
                 )
         else:
