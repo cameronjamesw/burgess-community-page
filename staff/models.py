@@ -22,3 +22,4 @@ class Staff_Member(models.Model):
     tenure = models.IntegerField(default=0)
     facts = models.TextField(blank=False)
     memory = models.TextField(blank=False)
+    approved = models.BooleanField(default=False)
