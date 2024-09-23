@@ -124,8 +124,10 @@ footer {
 }
 
 #image-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #000;
     border: #fff solid 5px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 /* Login Page Styling */
