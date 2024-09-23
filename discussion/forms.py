@@ -5,7 +5,13 @@ from django import forms
 class DiscussionForm(forms.ModelForm):
     class Meta:
         model = Discussion
-        fields = ('title', 'excerpt', 'content')
+        fields = ('title', 'featured_image', 'excerpt', 'content')
+        lables = {
+            'featured_image': 'Discussion Photo',
+            'title': 'Title',
+            'excerpt': 'Excerpt',
+            'content': 'Content'
+        }
         
 
 # This is the Comment Form where users can create a comment 
