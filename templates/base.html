@@ -3,6 +3,8 @@
 {% url 'home' as home_url %}
 {% url 'discussion_content' as discussion_content_url %}
 {% url 'staff_page' as staff_page_url %}
+{% url 'burgess_staff as burgess_page_url %}
+{% url 'hayward_staff as hayward_page_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -59,13 +61,13 @@
                 aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Staff
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{% url 'staff_page' %}">All Staff</a></li>
+                <li><a class="dropdown-item {% if request.path == staff_page_url or request.path == burgess_page_url or request.path == hayward_page_url %}active{% endif %}" href="{% url 'staff_page' %}">All Staff</a></li>
                 <li><a class="dropdown-item" href="{% url 'burgess_staff' %}">Burgess</a></li>
-                <li><a class="dropdown-item" href="#">Hayward</a></li>
+                <li><a class="dropdown-item" href="{% url 'hayward_staff' %}">Hayward</a></li>
               </ul>
             </li>
             {% if user.is_authenticated %}
