@@ -22,6 +22,15 @@ Throughout the process of creating the Burgess Community Page, I have been condu
 
 # Manual Testing
 
+In any instance of a fail there is a detailed description and resolution underneath!
+
+### Admin Testing
+
+| Test | Outcome | Pass or Fail
+| --- | --- | --- |
+| Create Discussion | A successful discussion was created, and was displayed as unapproved to the author, upon approval it was displayed for other users | Pass
+| Edit Discussion | 
+
 # User
 
 # Bugs
