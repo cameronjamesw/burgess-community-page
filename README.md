@@ -157,6 +157,20 @@ Below are a list of the wireframes I have created for inspiration to follow for 
 
 ## Database Plan
 
+The database plan is fairly simple, here it shows the information that is stored wihtin the database, the type of data which is being stored, and finally, whether or not a primary or foreign key is being used.
+
+### Discussion ERD
+
+![A screenshot of the discussion database layout](documentation/database_plans/discussion_erd.png)
+
+### Comment ERD
+
+![A screenshot of the comment database layout](documentation/database_plans/comment_erd.png)
+
+### Staff ERD
+
+![A screenshot of the staff database layout](documentation/database_plans/profile_erd.png)
+
 # Features
 
 Below are the list of current features throughout the website. There is a section towards the end discussing future features which will be implemented at a future date.
