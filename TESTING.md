@@ -75,6 +75,7 @@ In any instance of a fail there is a detailed description and resolution underne
 ### Deleting Unapproved Edited Comments Produces a 500 Error
 - From testing, it appears as though unapproved comments that have been edited throw 500 Errors upon deletion. Comments that are created and deleted without being edited cause no issues.
 - I have tried to debug this and one of the work arounds that I have found is that if a comment is edited, it will first need to be approved prior to the user attempting to delete it.
+- In the URL path, the comment ID has a value of null, so clearly the comments.js file is struggling to read the comment ID once the comment has been edited. 
 
 # Lighthouse
 
