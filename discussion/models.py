@@ -16,7 +16,6 @@ class Discussion(models.Model):
     excerpt = models.CharField(max_length=100, blank=False)
     content = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     approved = models.BooleanField(default=False)
 
@@ -36,7 +35,6 @@ class Comment(models.Model):
     )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
