@@ -217,6 +217,10 @@ Within the staff profiles page, the user is able to create their own profile to 
 
 ## Future Features
 
+- As per the canban board within the [Agile project board](https://github.com/users/cameronjamesw/projects/5/views/1), there was a user story that I never had the chance to implement into the website. This feature was a way of tracking site growth, mainly for the benefit of the admin. This feature would allow the admin to track the amount of users and see that number grow over a period of time, thus helping future-proof the staff members of Camp Burgess & Hayward.
+
+- Another feature which I will look to implement in the future is full CRUD functionality for the staff page. Currently users only have the ability to Create and Read the content currently on the page; however, there is no option for them to Update or Delete their user profile. Adding these features to the staff page will create further individuality for the user as well as providing for a better user experience. 
+
 # Technologies Used
 
 # Programming Languages, Libraries & Frameworks Used
