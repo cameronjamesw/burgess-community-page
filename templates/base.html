@@ -58,9 +58,15 @@
               <a class="{% if request.path == home_url %}active{% endif %}" aria-label="Go to the home page"
                 aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
-            <li>
-              <a class="{% if request.path == staff_page_url %}active{% endif %}" aria-label="Go to the staff page"
-                aria-current="page" href="{% url 'staff_page' %}">Staff</a>
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Staff
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'staff_page' %}">All Staff</a></li>
+                <li><a class="dropdown-item" href="{% url 'burgess_staff' %}">Burgess</a></li>
+                <li><a class="dropdown-item" href="#">Hayward</a></li>
+              </ul>
             </li>
             {% if user.is_authenticated %}
             <!-- This link will only appear if the user is authenticated -->

@@ -58,3 +58,16 @@ def display_staff(request):
         "staff/staff_profile.html",
         context
     )
+
+def display_burgess_staff(request):
+    staff_profiles = Staff_Member.objects.filter(camp=0)
+
+    context = {
+        'staff_profiles': staff_profiles
+    }
+
+    return render(
+        request,
+        "staff/staff_profile.html",
+        context
+    )
