@@ -79,6 +79,18 @@ In any instance of a fail there is a detailed description and resolution underne
 
 # Lighthouse
 
+Here are the results provided by Lighthouse
+
+- Both the performance and best practises appear to be low when looking at desktops and mobiles. From looking into this, it appears that this is due to using Cloudinary to store the images for both the discussions and the staff profiles.
+
+### Mobile 
+
+![A screenshot of the results of lighthouse testing mobile devices](documentation/images/lighthouse_phone.png)
+
+### Desktop
+
+![A screenshot of the results of Lighthouse testing on desktops](documentation/images/lighthouse_desktop.png)
+
 # Validation Testing
 
 ## HTML
