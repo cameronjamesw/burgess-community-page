@@ -26,7 +26,8 @@ Live site can be viewed here - [Burgess Community Page](https://burgess-communit
     * [Sign Up / Registration](#sign-up--registration)
     * [Creating a Discussion](#creating-a-discussion)
     * [Commenting on a Discussion](#commenting-on-a-discussion)
-    * [Staff Profile / Profile Customisation](#staff-profile--profile-customisation)
+    * [View Staff Profile](#view-staff-profiles)
+    * [Create Profile](#create-profile)
     * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
 * [Programming Languages, Frameworks & Libraries Used](#programming-languages-libraries--frameworks-used)
@@ -202,7 +203,17 @@ In the event of the discussion being deleted, all related comments to said discu
 
 ![A screenshot of the form where users are able to post comments on discussions](documentation/images/create-comment-ss.png)
 
-## Staff Profile / Profile Customisation
+## View Staff Profiles
+
+Below is a screenshot of the staff profile page, all users of the website will be able to access this page and view the current staff members of Camp Burgess & Hayward. With the two camps being seperate, there is a filter where the user is able to view just the Burgess staff members, or just the Hayward staff members. There is a drop down menu under the staff link where the user is able to access this.
+
+![A screenshot of the staff profiles page](documentation/images/staff_profiles.png)
+
+## Create Profile
+
+Within the staff profiles page, the user is able to create their own profile to add to the page, providing they are authenticated. They can fill out a form to their liking and which best matches their summer camp experience. Defensive coding has been used here, the profile will only be displayed on the page once an admin has approvied it. Furthermore, in the instance that a user tries to create a second profile, they will recieve an error stating that they can only have one profile.
+
+![A screenshot of the create profile form](documentation/images/customise_profile.png)
 
 ## Future Features
 
