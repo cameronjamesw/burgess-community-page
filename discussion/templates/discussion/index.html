@@ -24,7 +24,7 @@
             {% for discussion in discussions %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3 {% if not discussion.approved and discussion.author == user %}
             faded{% elif not discussion.approved %} d-none{% endif %}">
-                <div class="card mb-4" id="discussion-card" aria-labelledby="card-img-1 card-img-2">
+                <div class="card mt-4 mb-4 border border-light">
                     <!-- This code adds an awaiting approval message -->
                     {% if not discussion.approved and discussion.author == user %}
                     <p
@@ -33,9 +33,9 @@
                     {% endif %}
                     {% if "placeholder" in discussion.featured_image.url %}
                     <!-- This is the image for the discussion -->
-                    <img class="card-img-top" id="card-img-1" src="{% static 'images/sample_photo.png' %}" alt="placeholder, default image">
+                    <img class="card-img-top" aria-label="Static Image" src="{% static 'images/sample_photo.png' %}" alt="placeholder, default image">
                     {% else %}
-                    <img class="card-img-top" id="card-img-2" src=" {{ discussion.featured_image.url }}" alt="Image for {{ discussion.title }}">
+                    <img class="card-img-top" aria-label="Featured Image" src=" {{ discussion.featured_image.url }}" alt="Image for {{ discussion.title }}">
                     {% endif %}
                     <div class="card-body">
                         <!-- These are the discussions properties -->
