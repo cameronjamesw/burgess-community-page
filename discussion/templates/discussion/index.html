@@ -5,13 +5,13 @@
 {% block content %}
 <!-- This is the hero image -->
 <section class="container-fluid" id="hero-image" aria-label="Background image of a beautiful camp sunset">
-    <div class="container-lg text-center" id="hero-text" aria-labelledby="heading text createDiscussionButton">
+    <div class="container-lg text-center" id="hero-text" aria-labelledby="heading text">
         <!-- This is the hero text -->
         <h3 id="heading" class="text-uppercase">Camp Burgess & Hayward community page</h3>
         <p id="text">For the use of the '24 staff</p>
         {% if user.is_authenticated %}
         <!-- This button only appears if user is authenticated -->
-        <button class="btn btn-lg btn-success" id="createDiscussionButton">Create Discussion</button>
+        <button class="btn btn-lg btn-success" aria-label="Create Discussion Button" id="createDiscussionButton">Create Discussion</button>
         {% endif %}
     </div>
 
@@ -24,7 +24,7 @@
             {% for discussion in discussions %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3 {% if not discussion.approved and discussion.author == user %}
             faded{% elif not discussion.approved %} d-none{% endif %}">
-                <div class="card mb-4" id="discussion-card" aria-labelledby="card-img">
+                <div class="card mb-4" id="discussion-card" aria-labelledby="card-img-1 card-img-2">
                     <!-- This code adds an awaiting approval message -->
                     {% if not discussion.approved and discussion.author == user %}
                     <p
@@ -33,15 +33,15 @@
                     {% endif %}
                     {% if "placeholder" in discussion.featured_image.url %}
                     <!-- This is the image for the discussion -->
-                    <img class="card-img-top" id="card-img" src="{% static 'images/sample_photo.png' %}" alt="placeholder, default image">
+                    <img class="card-img-top" id="card-img-1" src="{% static 'images/sample_photo.png' %}" alt="placeholder, default image">
                     {% else %}
-                    <img class="card-img-top" id="card-img" src=" {{ discussion.featured_image.url }}" alt="Image for {{ discussion.title }}">
+                    <img class="card-img-top" id="card-img-2" src=" {{ discussion.featured_image.url }}" alt="Image for {{ discussion.title }}">
                     {% endif %}
-                    <div class="card-body" aria-labelledby="title author excerpt">
+                    <div class="card-body">
                         <!-- These are the discussions properties -->
-                        <h4 id="title" class="card-title">{{discussion.title}}</h4>
-                        <h5 id="author" class="card-title">{{discussion.author}}</h5>
-                        <p id="excerpt" class="card-text">{{discussion.excerpt}}</p>
+                        <h4 class="card-title">{{discussion.title}}</h4>
+                        <h5 class="card-title">{{discussion.author}}</h5>
+                        <p class="card-text">{{discussion.excerpt}}</p>
                         <div class="d-flex mb-3">
                             <div class="me-auto">
                                 <!-- This anchor points to the specific discussion's URL -->
@@ -66,7 +66,7 @@
                 <h3 id="discussionModalHeading" class="modal-title text-white">Create Discussion</h3>
                 <button id="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-white" aria-labelledby="discussionForm">
+            <div class="modal-body text-white" aria-labelledby="DiscussionForm">
                 <form id="DiscussionForm" method="POST" aria-labelledby="cancel submit">
                     {{ discussion_form | crispy }}
                     {% csrf_token %}
