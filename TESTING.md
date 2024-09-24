@@ -28,8 +28,18 @@ In any instance of a fail there is a detailed description and resolution underne
 
 | Test | Outcome | Pass or Fail
 | --- | --- | --- |
-| Create Discussion | A successful discussion was created, and was displayed as unapproved to the author, upon approval it was displayed for other users | Pass
-| Edit Discussion | 
+| Create Discussion | A successful discussion was created, and was displayed as unapproved to the author, upon approval it was displayed for other users. When displayed though, the discussion content is displayd in HTML code(*). | Fail |
+| Edit Discussion | A pre-existing discussion was edited within the admin panel and successfully updated on the discussion page. However, as noted above, the content appears to be in HTML(*). | Fail |
+| Approve User Discussion | Discussion appears  for all users within feed upon approval, is not there otherwise | Pass |
+| Approve User Comments | Comments appear for all users under relevent discussion when approved | Pass
+| Delete User Comments | Comments successfully deleted | Pass |
+| Delete Discussions | Successfully deleted discussions | Pass |
+| Create Staff Profile | Staff Profile successfully created | Pass |
+| Delete Staff Profile | Staff Profile successfully deleted | Pass |
+| Delete User | User successfully deleted, along with profile, discussions and exisitng comments | Pass |
+
+(*) - When creating discussions within the admin panel, the content when parsed through to the template appears to be in HTML code, instead of humanly readable content. (see below)
+![A screenshot of the HTML error referenced above](documentation/images/html_error.png)
 
 # User
 
