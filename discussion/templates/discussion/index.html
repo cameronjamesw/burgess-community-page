@@ -24,7 +24,7 @@
             {% for discussion in discussions %}
             <div class="col-xs-6 col-sm-6 col-md-4 col-xxl-3 {% if not discussion.approved and discussion.author == user %}
             faded{% elif not discussion.approved %} d-none{% endif %}">
-                <div class="card mb-4" id="discussion-card">
+                <div class="card mb-4" id="discussion-card" aria-labelledby="card-img">
                     <!-- This code adds an awaiting approval message -->
                     {% if not discussion.approved and discussion.author == user %}
                     <p
