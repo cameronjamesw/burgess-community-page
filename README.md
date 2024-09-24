@@ -223,6 +223,13 @@ Within the staff profiles page, the user is able to create their own profile to 
 
 # Technologies Used
 
+- [GitPod](https://www.gitpod.io/) was used to build and create the project
+- [GitHub](https://github.com/) was used to host and store data for the website
+- [Heroku](https://heroku.com/) was used to deploy the project
+- [ElephantSQL](https://www.elephantsql.com/) was used to store the postgreSQL database
+- [PEP8 Validator](https://pep8ci.herokuapp.com/) was used to validate the python code
+- [Cloudinary](https://cloudinary.com/) was used as cloud storage for images uploaded as part of the discussion posts
+
 # Programming Languages, Libraries & Frameworks Used
 
 # Agile
