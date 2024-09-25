@@ -313,9 +313,9 @@ To create a clone you do the following;
 
 - The wireframe mockups were created using [Figma](https://www.figma.com/)
 
-- The majority of inspiration for this readme was fueled Mark Daniel and his [example readme](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md). It is a truly great example readme that ensures everyone ticks all the right boxes.
+- The majority of inspiration for this readme was fueled by Mark Daniel and his [example readme](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md). It is a truly great example readme that ensures everyone ticks all the right boxes.
 
-- Thank you to [BugBytes](https://www.youtube.com/@bugbytes3923) and there video on [Handling User Uploads in Django](https://www.youtube.com/watch?v=lKyH_ZGtvwM) for helping debug what turned out to be a very small issue.
+- Thank you to [BugBytes](https://www.youtube.com/@bugbytes3923) and their video on [Handling User Uploads in Django](https://www.youtube.com/watch?v=lKyH_ZGtvwM) for helping debug what turned out to be a very small issue.
 
 # Media
 
