@@ -7,6 +7,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # This is the Discussion Model
 class Discussion(models.Model):
+    """
+    This model stores a single discussion entry, related to :model:`auth.user`.
+    """
     title = models.CharField(max_length=150, unique=True)
     slug = models.SlugField(max_length=150, unique=True)
     author = models.ForeignKey(
@@ -25,8 +28,12 @@ class Discussion(models.Model):
     def __str__(self):
         return f"{self.title} | Written by {self.author}"
 
-# This is the Comment Modle 
+# This is the Comment Model
 class Comment(models.Model):
+    """
+    This model creates a singular comment which is attached
+    to a discussion, related to :model:`auth.User` and :model:`discussion.Discussion`.
+    """
     discussion = models.ForeignKey(
         Discussion, on_delete=models.CASCADE, related_name="comments"
     )
