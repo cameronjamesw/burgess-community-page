@@ -37,7 +37,7 @@
           <div>
             <div class="mx-4"> <strong class="text-secondary">
               <!-- This is the comment icon -->
-                <i aria-label="An icon showing the amount of comments" class="far fa-comments"></i> {{ comment_count }}
+                <i class="far fa-comments"></i> {{ comment_count }}
               </strong>
               <h2>Comments:</h2>
               <div>
@@ -89,7 +89,7 @@
   </div>
   <!-- Creating New Comments -->
   <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark" aria-labelledby="comment_form">
-    <div class="card-body" id="comment_form" aria-labelledby="addComment commentAuthor commentForm submitButton leaveComment">
+    <div class="card-body" id="comment_form" aria-labelledby="addComment commentAuthor submitButton leaveComment">
       <h2 id="addComment">Add a Comment:</h2>
       {% if user.is_authenticated %}
       <p id="commentAuthor">Posting as: {{ user.username }}</p>
@@ -110,11 +110,11 @@
 </section>
 
 <!-- Delete comment confirmation modal -->
-<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentlLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <h5 class="modal-title" id="deleteCommentLabel">Delete comment?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -152,11 +152,11 @@
 </div>
 
 <!-- This is the delete discussion confirmation modal -->
-<div class="modal fade" id="deleteDiscussionModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteDiscussionModal" tabindex="-1" aria-labelledby="deleteDiscussionLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete discussion?</h5>
+        <h5 class="modal-title" id="deleteDiscussionLabel">Delete discussion?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
