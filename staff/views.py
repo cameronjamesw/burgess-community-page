@@ -19,11 +19,10 @@ def display_staff(request):
 
     # This if statement is regarding the Staff Profile Form 
     if request.method == 'POST':
-        profile_form = ProfileForm(data=request.POST)
+        profile_form = ProfileForm(request.POST, request.FILES)
 
         # This if statement ensures there are no duplicate profiles
         if request.user not in current_profiles:
-            print(request.user)
             if profile_form.is_valid():
                 staff_profile = profile_form.save(commit=False)
                 staff_profile.user = request.user
