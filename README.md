@@ -245,6 +245,8 @@ This project was created through using the Agile Methodology.
 
 The project's structure and progression from start to finish can be seen [here](https://github.com/users/cameronjamesw/projects/5/views/1)
 
+As mentioned earlier, one of the user stories within the canban board has not yet been completed. Here I am refering to the site growth user story, where the client is able to track the site growth over time to help future proof the business. As per the Agile Methodology, before beginning the project, I decided that this user story should have a priority level of 'could have', and due to timing constraints I have to decide against implementing this feature. I will of course look at implementing this feature at a later date; however, at this time in the project I had to make a decision that the site growth feature was not realistically in the scope of achievability. 
+
 # Testing
 
 The testing file for the Burgess Community Page can be viewed [here](/TESTING.md)
