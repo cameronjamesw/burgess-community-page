@@ -60,12 +60,11 @@
             <div class="row g-0">
                 <div class="col-md-8">
                     <!-- This code refers to the proife body -->
-                    <div class="card-body"
-                        aria-labelledby="profileUserTenure profilePosition profileMemory profileFacts">
-                        <h2 id="profileUserTenure" class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
-                        <h4 id="profilePosition" class="card-text">Position: {{ profile.position }}</h4>
-                        <p id="profileMemory" class="card-text"><span class="fw-bold">Favourite Memory:</span> {{ profile.memory }}</p>
-                        <p id="profileFacts" class="card-text"><span class="fw-bold">Fun Facts:</span> {{ profile.facts }}</p>
+                    <div class="card-body">
+                        <h2 aria-label="profileUserTenure" class="card-title">Name: {{ profile.user }} | Years at Camp: {{ profile.tenure }}</h2>
+                        <h4 aria-label="profilePosition" class="card-text">Position: {{ profile.position }}</h4>
+                        <p aria-label="profileMemory" class="card-text"><span class="fw-bold">Favourite Memory:</span> {{ profile.memory }}</p>
+                        <p aria-label="profileFacts" class="card-text"><span class="fw-bold">Fun Facts:</span> {{ profile.facts }}</p>
                     </div>
                 </div>
                 <div class="col-md-4 position-relative">
@@ -92,7 +91,6 @@
 
         <!-- End statement for profile for loop -->
         {% endfor %}
-    </div>
     </div>
 </section>
 
