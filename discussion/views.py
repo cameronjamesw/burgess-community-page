@@ -227,7 +227,8 @@ def discussion_edit(request, slug):
     if request.method == "POST":
         queryset = Discussion.objects.all()
         discussion = get_object_or_404(queryset, slug=slug)
-        discussion_forn = DiscussionForm(data=request.POST,
+        discussion_forn = DiscussionForm(request.POST,
+                                         request.FILES,
                                          instance=discussion)
 
         # This if statement ensures only the author can
