@@ -113,3 +113,5 @@ Here are the results provided by Lighthouse
 - JavaScript testing and validation was executed using [JSHint](https://jshint.com/), and all files ([alter_discussion.js](static/js/alter_discussion.js), [comments.js](static/js/comments.js), [discussion.js](static/js/discussion.js) and [staff.js](static/js/staff.js)) all returned without any errors.
 
 # Python Testing
+
+- Python PEP8 compliance testing and validation executed using [CI Python Linter](https://pep8ci.herokuapp.com/). Within both the discussion and staff apps, the [urls.py](discussion/urls.py), [forms.py](discussion/forms.py), [models.py](staff/models.py) and [views.py](staff/views.py) files were tested and all came back with no errors.
