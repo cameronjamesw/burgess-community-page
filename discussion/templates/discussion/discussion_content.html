@@ -28,7 +28,7 @@
           {% endif %}
           <!-- This is the discussion content -->
           <h5 id="discussionAuthor" class="card-title">Written by {{discussion.author}} | Created on {{discussion.created_on}}</h5>
-          <p id="discussionContent" class="card-text" id="discussionContent">{{discussion.content}}</p>
+          <p id="discussionContent" class="card-text">{{discussion.content}}</p>
           <p id="lastUpdated" class="card-text"><small>Last updated {{discussion.updated_on}}</small></p>
 
           <hr>
@@ -49,8 +49,8 @@
                 faded{% elif not comment.approved %} d-none{% endif %}">
                   {% if user.is_authenticated and comment.author == user %}
                   <!-- This code allows the user to edit and delete their own comments -->
-                  <div class="d-flex gap-2 my-1" aria-labelledby="commentAuthor editComment deleteComment">
-                    <div id="commentAuthor" class="me-auto fw-medium text-decoration-underline bs-dark card-header">
+                  <div class="d-flex gap-2 my-1" aria-labelledby="editComment deleteComment">
+                    <div aria-label="commentAuthor" class="me-auto fw-medium text-decoration-underline bs-dark card-header">
                       {{ comment.author }}
                     </div>
                     <button id="editComment" class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
@@ -63,9 +63,9 @@
                   {{ comment.author }}
                 </div>
                 {% endif %}
-                <div class="card-body bg-dark" aria-labelledby="waitingApproval">
+                <div class="card-body bg-dark">
                   {% if not comment.approved and comment.author == user %}
-                  <p id="waitingApproval" class="text-danger-emphasis mark">
+                  <p class="text-danger-emphasis mark">
                     This comment is awaiting approval
                   </p>
                   {% endif %}
@@ -89,10 +89,10 @@
   </div>
   <!-- Creating New Comments -->
   <div class="card col-lg-8 g-0 offset-lg-2 text-bg-dark" aria-labelledby="comment_form">
-    <div class="card-body" id="comment_form" aria-labelledby="addComment commentAuthor submitButton leaveComment">
-      <h2 id="addComment">Add a Comment:</h2>
+    <div class="card-body" id="comment_form">
+      <h2>Add a Comment:</h2>
       {% if user.is_authenticated %}
-      <p id="commentAuthor">Posting as: {{ user.username }}</p>
+      <p>Posting as: {{ user.username }}</p>
       <!-- This is the comment form to create new comments -->
       <form id="commentForm" method="post" style="margin-top: 1.3em;">
         {{ comment_form | crispy }}
@@ -110,7 +110,7 @@
 </section>
 
 <!-- Delete comment confirmation modal -->
-<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentlLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCommentModal" tabindex="-1" aria-labelledby="deleteCommentLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
