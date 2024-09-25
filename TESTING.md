@@ -14,6 +14,7 @@ Live site can be viewed here - [Burgess Community Page](https://burgess-communit
 * [Validation Testing](#validation-testing)
     * [HTML](#html)
     * [CSS](#css)
+    * [JavaScript](#javascript)
 * [Python Testing](#python-testing)
 
 # Introduction
@@ -100,5 +101,7 @@ Here are the results provided by Lighthouse
 ## CSS
 
 - CSS Validation was completed with W3C Jigsaw, and the [style.css](static/css/style.css) file returned no errors.
+
+## JavaScript
 
 # Python Testing
