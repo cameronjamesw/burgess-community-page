@@ -110,4 +110,6 @@ Here are the results provided by Lighthouse
 
 ## JavaScript
 
+- JavaScript testing and validation was executed using [JSHint](https://jshint.com/), and all fields ([alter_discussion.js](static/js/alter_discussion.js), [comments.js](static/js/comments.js), [discussion.js](static/js/discussion.js) and [staff.js](static/js/staff.js)) all returned without any errors.
+
 # Python Testing
