@@ -9,6 +9,8 @@ CAMPS = ((0, "Burgess"), (1, "Hayward"))
 # Create your models here.
 
 # This model refers to the Staff Members
+
+
 class Staff_Member(models.Model):
     """
     This model stores a singular staff profile, related to :model:`auth.User`.
