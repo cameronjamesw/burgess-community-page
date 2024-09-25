@@ -1,6 +1,7 @@
+from cloudinary.models import CloudinaryField
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
+
 
 # This refers to which camp the user works at
 CAMPS = ((0, "Burgess"), (1, "Hayward"))

@@ -1,5 +1,5 @@
-from .models import Discussion, Comment
 from django import forms
+from .models import Discussion, Comment
 
 # This is the Discussion Form where users can create a discussion 
 class DiscussionForm(forms.ModelForm):

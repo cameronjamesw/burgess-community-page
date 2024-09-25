@@ -1,5 +1,5 @@
-from .models import Staff_Member
 from django import forms
+from .models import Staff_Member
 
 class ProfileForm(forms.ModelForm):
     class Meta:
