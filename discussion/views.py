@@ -14,7 +14,7 @@ def discussion_list(request):
    
     # This if statement refers to the Discussion Form
     if request.method == "POST":
-        discussion_form = DiscussionForm(data=request.POST)
+        discussion_form = DiscussionForm(request.POST, request.FILES)
         if discussion_form.is_valid():
             discussion = discussion_form.save(commit=False)
             discussion.author = request.user
