@@ -7,11 +7,13 @@ from .forms import ProfileForm
 # Create your views here.
 
 # This view is to display the staff profiles
+
+
 def display_staff(request):
     """
     This view renders the staff profile page to
     the user and displays all the instances from
-    :model:`staff.Staff_Member`. Also allows the 
+    :model:`staff.Staff_Member`. Also allows the
     user to create their own staff profile through
     creating an instance of :form:`staff.ProfileForm`.
 
@@ -34,9 +36,8 @@ def display_staff(request):
 
     for profile in staff_profiles:
         current_profiles.append(profile.user)
-    
 
-    # This if statement is regarding the Staff Profile Form 
+    # This if statement is regarding the Staff Profile Form
     if request.method == 'POST':
         profile_form = ProfileForm(request.POST, request.FILES)
 
@@ -61,7 +62,6 @@ def display_staff(request):
                 "You can only have one profile!"
             )
 
-
     profile_form = ProfileForm()
 
     context = {
@@ -75,7 +75,9 @@ def display_staff(request):
         context
     )
 
+
 def display_burgess_staff(request):
+
     """
     This view renders the staff profile page to
     the user but only displays instance from
@@ -103,7 +105,9 @@ def display_burgess_staff(request):
         context
     )
 
+
 def display_hayward_staff(request):
+
     """
     This view renders the staff profile page to
     the user but only displays instance from
