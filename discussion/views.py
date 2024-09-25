@@ -48,6 +48,11 @@ def discussion_list(request):
                 request, messages.SUCCESS,
                 'Thank you, discussion submitted, awaiting approval!'
             )
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                'Error submitting form, please try again.'
+            )
 
     discussion_form = DiscussionForm()
 
@@ -115,6 +120,11 @@ def discussion_content(request, slug):
             messages.add_message(
              request, messages.SUCCESS,
              'Comment submitted and awaiting approval'
+            )
+        else:
+            messages.add_message(
+                request, messages.ERROR,
+                'Error submitting comment, please try again.'
             )
 
     discussion_form = DiscussionForm()
@@ -245,6 +255,10 @@ def discussion_edit(request, slug):
 
         # The user will be returned to the home page
         return HttpResponseRedirect(reverse('home'))
+
+    else:
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating discussion!')
 
 # This view refers to deleting a discussion
 
