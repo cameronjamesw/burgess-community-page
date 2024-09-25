@@ -66,7 +66,7 @@ In any instance of a fail there is a detailed description and resolution underne
 ### No Authentication Email
 - The first bug that I have encountered is within the authentication process. The user is required to sign up with an email, and in doing so an email verification link is sent to the email in question. However, no link is being sent to the user. The current work around that I have for this is that the link for verify the email is being sent to the console, and it is acessissible that way. I have also altered the verification settings so that the user does not need to have their email verified in order for them to log in. I have ensure that the user's experience is not impacted due to no verified email address.
 
-### Images Not Submitted Through Forms 
+### BUG FIXED - Images Not Submitted Through Forms 
 - The second bug which I encountered is that when submitting a form, if there is an image field within the form then the image is not posted upon submission. I believe this is because the rest of the text fields are of a different data type to the image which is why it is not being posted. This does not throw an error, and the form is still submitted, and because there is a default placeholder image in place as a back up, fixing this bug is not at the top of my priorities given my time frame.
 
 ### Background Images Stretching on iOS Devices
