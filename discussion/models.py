@@ -6,6 +6,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 
 # This is the Discussion Model
+
+
 class Discussion(models.Model):
     """
     This model stores a single discussion entry, related to :model:`auth.user`.
@@ -29,10 +31,13 @@ class Discussion(models.Model):
         return f"{self.title} | Written by {self.author}"
 
 # This is the Comment Model
+
+
 class Comment(models.Model):
     """
     This model creates a singular comment which is attached
-    to a discussion, related to :model:`auth.User` and :model:`discussion.Discussion`.
+    to a discussion, related to :model:`auth.User` and
+    :model:`discussion.Discussion`.
     """
     discussion = models.ForeignKey(
         Discussion, on_delete=models.CASCADE, related_name="comments"
