@@ -95,6 +95,10 @@ Here are the results provided by Lighthouse
 
 ## HTML
 
+- HTML validation was completed using W3c HTNL Validator. The [base.html](templates/base.html), [index.html](discussion/templates/discussion/index.html), [discussion_content.html](discussion/templates/discussion/discussion_content.html) and [staff_profile.html](staff/templates/staff/staff_profile.html) files were all tested, and all returned with no errors.
+
 ## CSS
+
+- CSS Validation was completed with W3C Jigsaw, and the [style.css](static/css/style.css) file returned no errors.
 
 # Python Testing
