@@ -156,6 +156,14 @@ Below are a list of the wireframes I have created for inspiration to follow for 
 
 ## Flow Diagram
 
+Here is a diagram of the admin flow diagram
+
+![A picture of the admin flow diagram](documentation/database_plans/Website-flow.drawio.png)
+
+Here is a diagram of the user flow diagram
+
+![A picture of the user flow diagram](documentation/database_plans/Website-flow.user.png)
+
 ## Database Plan
 
 The database plan is fairly simple, here it shows the information that is stored wihtin the database, the type of data which is being stored, and finally, whether or not a primary or foreign key is being used.
@@ -229,6 +237,7 @@ Within the staff profiles page, the user is able to create their own profile to 
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the postgreSQL database
 - [PEP8 Validator](https://pep8ci.herokuapp.com/) was used to validate the python code
 - [Cloudinary](https://cloudinary.com/) was used as cloud storage for images uploaded as part of the discussion posts
+- [Draw.io](https://app.diagrams.net/) was used to create the flow diagrams
 
 # Programming Languages, Libraries & Frameworks Used
 
