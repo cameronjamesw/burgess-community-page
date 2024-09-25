@@ -21,6 +21,7 @@ class Discussion(models.Model):
     excerpt = models.CharField(max_length=100, blank=False)
     content = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     approved = models.BooleanField(default=False)
 
