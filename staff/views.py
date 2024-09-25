@@ -8,6 +8,25 @@ from .forms import ProfileForm
 
 # This view is to display the staff profiles
 def display_staff(request):
+    """
+    This view renders the staff profile page to
+    the user and displays all the instances from
+    :model:`staff.Staff_Member`. Also allows the 
+    user to create their own staff profile through
+    creating an instance of :form:`staff.ProfileForm`.
+
+    **Context**
+
+    ``staff_profiles``
+        Refers to all the objects with :model:`staff.Staff_Member`.
+
+    ``profile_form``
+        An instance of :form:`staff.ProfileForm`
+
+    **Template**
+
+    :template:`staff/staff_profile.html`
+    """
     staff_profiles = Staff_Member.objects.all()
 
     # This empty list is populated with users upon the view loading
@@ -50,8 +69,6 @@ def display_staff(request):
         "profile_form": profile_form
     }
 
-    
-
     return render(
         request,
         "staff/staff_profile.html",
@@ -59,6 +76,21 @@ def display_staff(request):
     )
 
 def display_burgess_staff(request):
+    """
+    This view renders the staff profile page to
+    the user but only displays instance from
+    :model:`staff.Staff_Member` that have a camp
+    value of 0 or Burgess.
+
+    **Context**
+
+    ``staff_profiles``
+        Refers to all the objects with :model:`staff.Staff_Member`.
+
+    **Template**
+
+    :template:`staff/staff_profile.html`
+    """
     staff_profiles = Staff_Member.objects.filter(camp=0)
 
     context = {
@@ -72,6 +104,21 @@ def display_burgess_staff(request):
     )
 
 def display_hayward_staff(request):
+    """
+    This view renders the staff profile page to
+    the user but only displays instance from
+    :model:`staff.Staff_Member` that have a camp
+    value of 1 or Hayward.
+
+    **Context**
+
+    ``staff_profiles``
+        Refers to all the objects with :model:`staff.Staff_Member`.
+
+    **Template**
+
+    :template:`staff/staff_profile.html`
+    """
     staff_profiles = Staff_Member.objects.filter(camp=1)
 
     context = {
