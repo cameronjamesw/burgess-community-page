@@ -1,7 +1,9 @@
 from django import forms
 from .models import Discussion, Comment
 
-# This is the Discussion Form where users can create a discussion 
+# This is the Discussion Form where users can create a discussion
+
+
 class DiscussionForm(forms.ModelForm):
     class Meta:
         model = Discussion
@@ -9,9 +11,9 @@ class DiscussionForm(forms.ModelForm):
         labels = {
             'featured_image': 'Discussion Photo',
         }
-        
 
-# This is the Comment Form where users can create a comment 
+
+# This is the Comment Form where users can create a comment
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
