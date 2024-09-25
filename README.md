@@ -335,6 +335,8 @@ To create a clone you do the following;
 
 - I would like to thank my mentor Jubril Akolade for looking over me during this project and ensuring I crossed-the-t's and dotted-the-i's in the world of coding.
 
-- I would like to thank my good buddies Harry Dawson and Steven Aitken for allowing me to use their handsome faces throughout the majority of the project.
+- I would like to thank my girlfriend, Hannah, for withstanding late nights of coding and comforting me when a URL got the better of me.
 
-- Finally I would like to thank my girlfriend, Hannah, for withstanding late nights of coding and comforting me when a URL got the better of me.
+- Finally, I would like to thank the community over at Camp Burgess & Hayward for fueling this project idea and giving me the passion and desire to produce a project I am so very proud of!
+
+![A photo of the Camp Burgess & Hayward community](documentation/images/All%20staff%20(2).JPG)
