@@ -52,7 +52,7 @@ In any instance of a fail there is a detailed description and resolution underne
 | Create Discussion | Create discussion form successfully submitted, discussion displayed with awaiting approval tag. However featured image is not submitted through form, default placeholder image is shown instead(*) | Fail |
 | After Bug Fix - Create Discussion | Discussion form successfully submitted, the image field has now been posted to the database | Pass |
 | View Discussion | Discussion successfully viewed, along with options to leave comments | Pass |
-| Edit Discussion | Discussion successfully edited, user is returned to the home page upon reverse. Update confirmation message displayed to the user. Discussion approved status is set back to false for admin to approve. | Pass |
+| Edit Discussion | Discussion successfully edited, user is returned to the home page upon reverse. Update confirmation message displayed to the user. Discussion approved status is set back to false for admin to approve. If user tries to change the featured image it is not updated.(*) | Fail |
 | Delete Discussion | Discussion successfully deleted. User is returned back to the home page upon reverse, deletion confirmation message displated to the user. | Pass |
 | Create Comment | User successfully created a comment, comment has approved status of false and is only visible to user in question. Comment created message displayed to the user | Pass |
 | Edit Comment | Comment successfully updated. Approved status set back to false for admin to approve. Comment updated message displayed to the user. | Pass |
@@ -70,7 +70,10 @@ In any instance of a fail there is a detailed description and resolution underne
 
 ### BUG FIXED - Images Not Submitted Through Forms 
 - The second bug which I encountered is that when submitting a form, if there is an image field within the form then the image is not posted upon submission. I believe this is because the rest of the text fields are of a different data type to the image which is why it is not being posted.
-- This bug has now been fixed. The FILES perameter was not being passed when the DiscussionForm function was being called, furthermore within the index.html, the form field did not have the 'enctype' attribute. 
+- This bug has now been fixed. The FILES perameter was not being passed when the DiscussionForm function was being called, furthermore within the index.html, the form field did not have the 'enctype' attribute.
+
+### Image Not Updated When Discussion Edited
+- Through testing I have noticed that the user's featured image of a discussion is not updated when the user submits the form. I have added 'enctype' to the form feild as well as adding the FILES perameter upon the function being called. I will look into debugging this in the future when I have more time to add to this project. I believe that the issue lies with not knowing how to override a pre-existing Cloudinary field.
 
 ### Background Images Stretching on iOS Devices
 - I have encountered this same bug throughout my entire coding journey and I am no closer to debugging this. When the live site is viewed on a mobile iOS device (iPhone, iPad) the background images are extremely stretched. This has been tested on multiple browers, Chrome, FireFox and Safari to name a few, and all the images are the same.

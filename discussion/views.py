@@ -62,6 +62,21 @@ def discussion_content(request, slug):
         'Comment submitted and awaiting approval'
     )
 
+    if request.method == "POST":
+        discussion_form = DiscussionForm(request.POST)
+        if discussion_form.is_valid():
+            discussion = discussion_form.save(commit=False)
+            discussion.author = request.user
+
+            # Slugify creates a slug based off of the title field 
+            discussion.slug = slugify(discussion.title)
+            discussion.approved = False
+            discussion.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Thank you, discussion updated, awaiting approval!'
+            )
+
     discussion_form = DiscussionForm()
     comment_form = CommentForm()
 

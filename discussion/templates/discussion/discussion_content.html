@@ -139,7 +139,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-white">
-        <form method="POST" id="discussionForm">
+        <form method="POST" enctype="multipart/form-data" id="discussionForm">
           <!-- This is the form that allows the user to edit their discussion -->
           {{ discussion_form | crispy }}
           {% csrf_token %}
