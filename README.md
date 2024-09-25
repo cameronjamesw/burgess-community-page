@@ -238,6 +238,9 @@ Within the staff profiles page, the user is able to create their own profile to 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Django](https://www.djangoproject.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- [CrispyForms](https://www.djangoproject.com/)
+- [GoogleFonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 # Agile
 
@@ -302,10 +305,36 @@ To create a clone you do the following;
 
 # Credits
 
+- This project was based off of Code Institute's 'I Think Therefore I Blog' project. I would like to thank Code Institute for giving me such a solid and sound knowledge and understanding of using Django along with encorporating back-end PostgreSQL knowledge into the project too. I built heavily upon this inspiration through adding my own styling through mainly Bootstrap, but also minimal CSS where neccessary. I have also encorporated further authentication. along with my own Staff_Member Model, where users can view the current staff members as well as create their own profile.
+
+- I recieved considerable help and advice from the Code Institute Slack Community, and I found them as a pillar to lean on much more than I ever expected to throughout this project. The members within the community helps me decipher issues big and small at all times of the day and I will be eternally grateful for that.
+
+- I would like to thank [Camp Burgess & Hayward](https://www.campburgessandhayward.com/) for giving me the inspiration and the platform to create this project. I have been lucky enough to work for them for 3 summers now, so now I feel I have really come full circle in being able to give back to a community that has given so much to me.
+
+- The wireframe mockups were created using [Figma](https://www.figma.com/)
+
+- The majority of inspiration for this readme was fueled Mark Daniel and his [example readme](https://github.com/markdaniel1982/MD82-P4/blob/main/README.md). It is a truly great example readme that ensures everyone ticks all the right boxes.
+
+- Thank you to [BugBytes](https://www.youtube.com/@bugbytes3923) and there video on [Handling User Uploads in Django](https://www.youtube.com/watch?v=lKyH_ZGtvwM) for helping debug what turned out to be a very small issue.
+
 # Media
 
 - [Vector Stock](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478) - The Favicon was taken from Vector Stock
 
 - [Flickr](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478) - The Cape Cod image was taken from Flickr
 
+- [Camp Burgess & Hayward](https://www.campburgessandhayward.com/) - The logo was given to by the SSYMCA upon working for Camp Burgess
+
+- [PNGITEM](https://www.pngitem.com/middle/hmhxiJi_anonymous-profile-grey-person-sticker-glitch-empty-profile/) - The stock photo icon was taken from PNGITEM
+
+- All the photos used for the discussions were photos that I have taken myself whilst working at Camp Burgess & Hayward
+
 # Acknowledgements & Thanks
+
+- I would like to thank [Net Ninja](https://www.youtube.com/@NetNinja) with his video on [Django Views & URLS](https://www.youtube.com/watch?v=TblSa29DX6I) who's clear and calm explanation reassured me that I do understand Django, and that I was just having a meltdown.
+
+- I would like to thank my mentor Jubril Akolade for looking over me during this project and ensuring I crossed-the-t's and dotted-the-i's in the world of coding.
+
+- I would like to thank my good buddies Harry Dawson and Steven Aitken for allowing me to use their handsome faces throughout the majority of the project.
+
+- Finally I would like to thank my girlfriend, Hannah, for withstanding late nights of coding and comforting me when a URL got the better of me.
