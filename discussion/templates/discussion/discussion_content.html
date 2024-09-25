@@ -50,7 +50,7 @@
                   {% if user.is_authenticated and comment.author == user %}
                   <!-- This code allows the user to edit and delete their own comments -->
                   <div class="d-flex gap-2 my-1" aria-labelledby="editComment deleteComment">
-                    <div aria-label="commentAuthor" class="me-auto fw-medium text-decoration-underline bs-dark card-header">
+                    <div class="me-auto fw-medium text-decoration-underline bs-dark card-header">
                       {{ comment.author }}
                     </div>
                     <button id="editComment" class="btn btn-success btn-edit" comment_id="{{ comment.id }}"><i
@@ -59,7 +59,7 @@
                         class="fa-regular fa-trash-can"></i></button>
                   </div>
                   {% else %}
-                  <div id="commentAuthor" class="fw-medium text-decoration-underline bs-dark card-header">
+                  <div class="fw-medium text-decoration-underline bs-dark card-header">
                   {{ comment.author }}
                 </div>
                 {% endif %}
