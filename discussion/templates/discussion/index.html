@@ -26,10 +26,18 @@
             faded{% elif not discussion.approved %} d-none{% endif %}">
                 <div class="card mt-4 mb-4 border border-light">
                     <!-- This code adds an awaiting approval message -->
-                    {% if not discussion.approved and discussion.author == user %}
-                    <p
-                        class="alert alert-warning border border-dark position-absolute top-0 end-0 fw-bolder mt-2">
-                        Awaiting approval</p>
+                    {% if not discussion.status and discussion.author == user %}
+                    <button
+                    data-bs-toggle="popover" data-bs-title="Draft Post" data-bs-content="This post is currently a draft, only you can see this!" class="alert alert-info border border-dark position-absolute top-0 end-0 fw-bolder mt-2">
+                        Draft <i class="ps-1 fa-regular fa-circle-question"></i></button>
+                    {% elif not discussion.approved and discussion.author == user %}
+                    <button
+                    data-bs-toggle="popover" data-bs-title="Unapproved Post" data-bs-content="This post is published and now it is awaiting approval from an admin!" class="alert alert-warning border border-dark position-absolute top-0 end-0 fw-bolder mt-2">
+                        Awaiting approval  <i class="ps-1 fa-regular fa-circle-question"></i></button>
+                    {% elif discussion.approved and discussion.status and discussion.author == user %}
+                    <button
+                    data-bs-toggle="popover" data-bs-title="Approved Post" data-bs-content="This post is approved, everyone can now see this!" class="alert alert-success border border-dark position-absolute top-0 end-0 fw-bolder mt-2">
+                        Published  <i class="ps-1 fa-regular fa-circle-question"></i></button>
                     {% endif %}
                     {% if "placeholder" in discussion.featured_image.url %}
                     <!-- This is the image for the discussion -->

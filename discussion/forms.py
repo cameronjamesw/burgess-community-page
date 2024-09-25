@@ -7,7 +7,7 @@ from .models import Discussion, Comment
 class DiscussionForm(forms.ModelForm):
     class Meta:
         model = Discussion
-        fields = ('title', 'featured_image', 'excerpt', 'content')
+        fields = ('title', 'featured_image', 'excerpt', 'content', 'status')
         labels = {
             'featured_image': 'Discussion Photo',
         }
