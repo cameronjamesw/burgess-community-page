@@ -3,7 +3,6 @@
 const editDiscussionBtn = document.getElementById("editDiscussionBtn");
 const delDiscussionBtn = document.getElementById("delDiscussionBtn");
 const submitBtn = document.getElementById("submitBtn");
-const delDiscussionConfirm = document.getElementById("deleteDiscussionConfirm");
 
 /** These variables refer to the selected text fields */
 const discussionText = document.getElementById("id_content");
@@ -41,6 +40,6 @@ editDiscussionBtn.addEventListener("click", (e) => {
  * delete discussion is clicked by the user
  */
 delDiscussionBtn.addEventListener("click", (e) => {
-    deleteDiscussionConfirm.href = 'delete_discussion/'
+    deleteDiscussionConfirm.href = 'delete_discussion/';
     deleteDiscussionModal.show();
 });
