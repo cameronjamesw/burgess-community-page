@@ -257,8 +257,8 @@ def discussion_edit(request, slug):
         return HttpResponseRedirect(reverse('home'))
 
     else:
-            messages.add_message(request, messages.ERROR,
-                                 'Error updating discussion!')
+        messages.add_message(request, messages.ERROR,
+                             'Error updating discussion!')
 
 # This view refers to deleting a discussion
 
