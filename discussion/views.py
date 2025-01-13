@@ -202,9 +202,10 @@ def comment_delete(request, slug, comment_id):
         Refers to the comment related to the
         discussion that the user wants to delete
     """
-    queryset = Discussion.objects.all(status=1)
+    queryset = Discussion.objects.filter(status=1)
     discussion = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
+    print(comment)
 
     if comment.author == request.user:
         comment.delete()
