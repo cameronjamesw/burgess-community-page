@@ -116,5 +116,7 @@
 
 {% block extras %}
 
+{% if user.is_authenticated and request.path == staff_page_url %}
 <script src="{% static 'js/staff.js' %}"></script>
+{% endif %}
 {% endblock %}

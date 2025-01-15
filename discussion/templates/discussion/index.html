@@ -90,5 +90,7 @@
 
 {% block extras %}
 <!-- This is the link to the javascript file -->
+{% if user.is_authenticated %}
 <script src="{% static 'js/discussion.js' %}"></script>
+{% endif %}
 {% endblock %}
