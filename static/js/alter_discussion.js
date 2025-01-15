@@ -22,7 +22,7 @@ const discussionForm = document.getElementById("discussionForm");
  * as well as changing the values of the form fields to
  * the current values of the discussion.
  */
-editDiscussionBtn.addEventListener("click", (e) => {
+editDiscussionBtn.addEventListener("click", () => {
     let discussionContentValue = discussionContent.innerText;
     discussionText.value = discussionContentValue;
 
@@ -40,7 +40,7 @@ editDiscussionBtn.addEventListener("click", (e) => {
  * This event listener shows the Delete Discussion Modal when
  * delete discussion is clicked by the user
  */
-delDiscussionBtn.addEventListener("click", (e) => {
+delDiscussionBtn.addEventListener("click", () => {
     deleteDiscussionConfirm.href = 'delete_discussion/'
     deleteDiscussionModal.show();
 });
