@@ -326,6 +326,8 @@ To create a clone you do the following;
 
 - Thank you to [BugBytes](https://www.youtube.com/@bugbytes3923) and their video on [Handling User Uploads in Django](https://www.youtube.com/watch?v=lKyH_ZGtvwM) for helping debug what turned out to be a very small issue.
 
+- I used this [code](https://stackoverflow.com/questions/79159883/warning-blocked-aria-hidden-on-an-element-because-its-descendant-retained-focu) from StackOverflow to fix an error I was having with the aria-hidden attribute. Adding this code to my JavaScript files fixed the error in the console I was encountering.
+
 # Media
 
 - [Vector Stock](https://www.vectorstock.com/royalty-free-vector/campfire-vector-917478) - The Favicon was taken from Vector Stock

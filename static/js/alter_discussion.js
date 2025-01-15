@@ -18,6 +18,20 @@ const deleteDiscussionModal = new bootstrap.Modal(document.getElementById("delet
 
 const discussionForm = document.getElementById("discussionForm");
 
+/**
+* This code overrides standard Bootstrap which was causing
+ * issues between modals and screenreaders. This code allows
+ * screenreaders to recognise that the modal is hidden and when
+ * it is active.
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener('hide.bs.modal', function (event) {
+        if (document.activeElement) {
+            document.activeElement.blur();
+        }
+    });
+});
+
 /** This event listener shows the Edit Discussion Modal
  * as well as changing the values of the form fields to
  * the current values of the discussion.
