@@ -25,7 +25,7 @@ class Staff_Member(models.Model):
     position = models.CharField(max_length=50)
 
     # Tenure refers to how longer they have been employed by the camp
-    tenure = models.IntegerField(default=0)
+    tenure = models.PositiveIntegerField(default=0)
     facts = models.TextField(blank=False)
     memory = models.TextField(blank=False)
     approved = models.BooleanField(default=False)
