@@ -7,14 +7,24 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteCommentMo
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteCommentConfirm");
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('hide.bs.modal', function (event) {
+    if (document.activeElement) {
+      document.activeElement.blur();
+    }
+  });
+});
+
 /**
- * These variables add event listeners to the 'edit' buttons of
- * each comment. The user can then update their comment through submitting
- * the form.
+* This code overrides standard Bootstrap which was causing
+ * issues between modals and screenreaders. This code allows
+ * screenreaders to recognise that the modal is hidden and when
+ * it is active.
  */
 for (let button of editButtons) {
-  button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
+  button.addEventListener("click", () => {
+    let commentId = button.getAttribute("comment_id");
+    console.log(commentId);
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
@@ -31,7 +41,8 @@ for (let button of editButtons) {
  */
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
+    let commentId = button.getAttribute("comment_id");
+    console.log(commentId);
     deleteConfirm.href = `delete_comment/${commentId}`;
     deleteModal.show();
   });
