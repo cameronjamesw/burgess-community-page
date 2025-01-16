@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
 for (let button of editButtons) {
   button.addEventListener("click", () => {
     let commentId = button.getAttribute("comment_id");
-    console.log(commentId);
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
     submitButton.innerText = "Update";
@@ -42,7 +41,6 @@ for (let button of editButtons) {
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
     let commentId = button.getAttribute("comment_id");
-    console.log(commentId);
     deleteConfirm.href = `delete_comment/${commentId}`;
     deleteModal.show();
   });

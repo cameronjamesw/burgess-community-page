@@ -55,6 +55,6 @@ editDiscussionBtn.addEventListener("click", () => {
  * delete discussion is clicked by the user
  */
 delDiscussionBtn.addEventListener("click", () => {
-    deleteDiscussionConfirm.href = 'delete_discussion/'
+    deleteDiscussionConfirm.href = 'delete_discussion/';
     deleteDiscussionModal.show();
 });
