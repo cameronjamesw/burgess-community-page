@@ -100,15 +100,47 @@
                 <h3 class="modal-title text-white">Create Profile</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-white">
-                <form method="POST" enctype="multipart/form-data" id="profileForm">
-                    <!-- This is the form that allows the user to edit their discussion -->
-                    {{ profile_form | crispy }}
-                    {% csrf_token %}
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" id="submitBtn" class="btn btn-success">Submit</button>
-                </form>
-            </div>
+            ```html
+<div class="modal-body text-white">
+    <form method="POST" enctype="multipart/form-data" id="profileForm">
+        <!-- This is the form that allows the user to edit their profile -->
+
+        {% csrf_token %}
+        {% load crispy_forms_tags %}
+
+        <div class="mb-3">
+            {{ profile_form.photo.label_tag }}
+            {{ profile_form.photo }}
+
+            {% if profile_form.photo.help_text %}
+                <div class="form-text text-white">
+                    {{ profile_form.photo.help_text }}
+                </div>
+            {% endif %}
+
+            {% if profile_form.photo.errors %}
+                <div class="invalid-feedback d-block">
+                    {{ profile_form.photo.errors|striptags }}
+                </div>
+            {% endif %}
+        </div>
+
+        {{ profile_form.camp | as_crispy_field }}
+        {{ profile_form.position | as_crispy_field }}
+        {{ profile_form.tenure | as_crispy_field }}
+        {{ profile_form.facts | as_crispy_field }}
+        {{ profile_form.memory | as_crispy_field }}
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+        </button>
+        <button type="submit" id="submitBtn" class="btn btn-success">
+            Submit
+        </button>
+    </form>
+</div>
+```
+
         </div>
     </div>
 </div>

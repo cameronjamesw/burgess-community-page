@@ -1,6 +1,7 @@
 from cloudinary.models import CloudinaryField
 from django.db import models
 from django.contrib.auth.models import User
+from .validators import validate_file_size
 
 
 # This refers to which camp the user works at
@@ -18,7 +19,9 @@ class Staff_Member(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE
     )
-    photo = CloudinaryField("image", default="placeholder")
+    photo = CloudinaryField("image", 
+                            validators=[validate_file_size],
+                            default="placeholder")
 
     # Camp refers to which camp they are working at, Burgess or Hayward
     camp = models.IntegerField(choices=CAMPS, default=0)
