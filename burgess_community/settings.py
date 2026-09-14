@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
                 '.herokuapp.com',
                 '127.0.0.1',
                 '127.0.0.1:8000',
+                'burgess-community-page-57f369ca8521.herokuapp.com/'
                 ]
 
 
@@ -103,9 +104,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-cameronjame-burgesscomm-pz47xl890y2.ws-us116.gitpod.io",
-    "https://*.herokuapp.com",
-    "https://8000-cameronjame-burgesscomm-2qessdbtfhv.ws.codeinstitute-ide.net",
+    'https://burgess-community-page-57f369ca8521.herokuapp.com/',
 ]
 
 
