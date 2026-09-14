@@ -28,12 +28,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
                 '127.0.0.1',
                 '127.0.0.1:8000',
-                'https://burgess-community-page.onrender.com'
+                'burgess-community-page.onrender.com'
                 ]
 
 
@@ -103,7 +103,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://burgess-community-page.onrender.com',
+    'burgess-community-page.onrender.com',
 ]
 
 
