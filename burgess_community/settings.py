@@ -33,7 +33,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
                 '127.0.0.1',
                 '127.0.0.1:8000',
-                'https://burgess-community-page.onrender.com/'
+                'https://burgess-community-page.onrender.com'
                 ]
 
 
@@ -103,7 +103,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://burgess-community-page.onrender.com/',
+    'https://burgess-community-page.onrender.com',
 ]
 
 
