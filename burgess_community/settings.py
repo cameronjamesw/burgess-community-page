@@ -31,10 +31,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-                '.herokuapp.com',
                 '127.0.0.1',
                 '127.0.0.1:8000',
-                'burgess-community-page-57f369ca8521.herokuapp.com/'
+                'https://burgess-community-page.onrender.com/'
                 ]
 
 
@@ -104,7 +103,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://burgess-community-page-57f369ca8521.herokuapp.com/',
+    'https://burgess-community-page.onrender.com/',
 ]
 
 
